@@ -1,5 +1,5 @@
 body {
-  background: #34363f;
+  background: #f2f2f2;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -10,3 +10,33 @@ body a {
 body a:hover {
   color: #c8c8c8;
 }
+
+.content {
+  display: flex;
+  flex-flow: row wrap; }
+
+.content__left {
+  width: 15%; }
+
+.content__middle {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.content__right {
+  width: 15%; }
+
+@media (max-width: 1400px) {
+  .content__left {
+    width: 20%; }
+  .content__middle {
+    width: 80%; }
+  .content__right {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .content__left {
+    width: 100%; }
+  .content__middle {
+    width: 100%; } }

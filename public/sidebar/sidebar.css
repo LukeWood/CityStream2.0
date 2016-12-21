@@ -1,0 +1,112 @@
+
+.content {
+  display: flex;
+  flex-flow: row wrap; }
+
+.content__left {
+  width: 15%; }
+
+@media (max-width: 1400px) {
+  .content__left {
+    width: 20%; }
+  .content__middle {
+    width: 80%; }
+  .content__right {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .content__left {
+    width: 100%; }
+  .content__middle {
+    width: 100%; } }
+
+.navigation {
+  padding: 15px;
+  background: #fff;
+  color: #aaaaaa;
+  overflow-y: scroll; }
+
+.navigation__list {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 15px; }
+
+.navigation__list__header:after {
+  font-family: "Ionicons";
+  content: "\f123"; }
+
+.navigation__list .active:after {
+  font-family: "Ionicons";
+  content: "\f126"; }
+
+.navigation__list__item {
+  color: #aaaaaa;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.navigation__list__item:hover {
+  color: #02adf9;
+  text-decoration: none;
+  border-right: 3px solid #0dfaf2; }
+
+.navigation__list__item i {
+  width: 25px;
+  display: block; }
+
+@media (max-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .navigation__list {
+      margin-bottom: 0;
+      width: calc( 100% / 3);
+      text-align: center; }
+      .navigation__list__item {
+        width: 100%;
+        text-align: center; }
+        .navigation__list__item i {
+          display: none; }
+        .navigation__list__item span {
+          margin: 0 auto; }
+        .navigation__list__item:hover {
+          border: none; } }
+
+.playlist {
+  padding: 15px;
+  background: #02adf9;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+
+}
+
+.playlist:hover {
+  background: #424242; }
+  .playlist:hover a {
+    color: white; }
+
+.playlist a {
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+  .playlist a:hover {
+    text-decoration: none; }
+  .playlist a i {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px; }
+
+@media (max-width: 768px) {
+  .playlist {
+    display: none; } }
+
+
+::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #373737; }
