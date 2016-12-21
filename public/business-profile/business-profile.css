@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #fff;
 }
 
 
@@ -10,7 +10,7 @@ body {
     height: 360px;
     border-bottom: 1px solid #698b9b;
     position: relative;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://static1.squarespace.com/static/52d45140e4b0ae205c434b6f/t/57d9c5c1f7e0abbf1b91308b/1473889766423/Saint+Ann+Restaurant+%26+Bar+Patio.jpg?format=1500w);
+    background-image: linear-gradient( rgba(60, 166, 244, 0.6), rgba(60, 166, 244, 0.1) ), url(https://static1.squarespace.com/static/52d45140e4b0ae205c434b6f/t/57d9c5c1f7e0abbf1b91308b/1473889766423/Saint+Ann+Restaurant+%26+Bar+Patio.jpg?format=1500w);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,9 +58,18 @@ body {
   .artist__header .artist__info__name {
     color: white;
     font-size: 36px;
-    font-weight: 100; }
+    font-weight: 100; }\
+    .artist__header .artist__info__followers {
+      display: inline-flex;
+      float: right;
+      align-items: center;
+      flex-flow: row wrap;
+    }
   .artist__header .artist__info__actions {
-    display: flex;
+    display: inline-flex;
+    margin-top: 10px;
+    width: 212px;
+    margin: auto;
     align-items: center;
     flex-flow: row wrap;
   }
@@ -184,13 +193,15 @@ body {
         .artist__content .overview__artist .latest-release__song {
           width: calc( 100% - 75px);
           padding: 10px 15px;
-          background: #34363f;
+          max-height: 75px;
           color: #aaaaaa;
+          border-top: 1px solid #698b9b;
+          border-bottom: 1px solid #698b9b;
           display: flex;
           flex-flow: column wrap;
           justify-content: space-between; }
           .artist__content .overview__artist .latest-release__song__title {
-            color: #c8c8c8; }
+            color: #34363f; }
     .artist__content .overview__related {
       width: 30%; }
     @media (max-width: 1024px) {
@@ -290,7 +301,7 @@ body {
 .tracks .track__title {
   width: 45%;
   margin-left: 30px;
-  color: white; }
+  color: #34363f; }
   .tracks .track__title.featured .title:after {
     content: "-";
     margin: 0 5px; }
@@ -380,7 +391,7 @@ body {
 @media (max-width: 480px) {
   .related-artists .related-artist {
     margin: 5px;
-    width: 20%;
+    width: 100%;
     background: none; }
     .related-artists .related-artist:hover {
       background: none;
@@ -399,7 +410,7 @@ body {
     justify-content: space-between;
     align-items: center; }
   .overview__albums__head .view-type {
-    color: white;
+    color: #34363f;
     margin-bottom: 4px; }
     .overview__albums__head .view-type .active {
       background: #698b9b;
@@ -434,7 +445,7 @@ body {
   letter-spacing: 1px; }
 
 .album__info__meta .album__name {
-  color: white;
+  color: #34363f;
   font-size: 30px;
   font-weight: 100; }
 
@@ -560,7 +571,7 @@ body {
     color: #2aa03b; }
 
     button {
-      border-radius: 10px;
+      border-radius: 5px;
       border: none;
       padding: 5px 15px;
       text-transform: uppercase;
@@ -589,6 +600,7 @@ body {
     .section-title {
       text-transform: uppercase;
       color: #aaaaaa;
+      margin-top: 25px; 
       letter-spacing: 1.25px;
       font-size: 13.2px;
       margin-bottom: 10px; }
