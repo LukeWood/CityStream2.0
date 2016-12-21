@@ -5,6 +5,9 @@ if(!Object.prototype.hasOwnProperty.call(window,"$")){
 if(!Object.prototype.hasOwnProperty.call(window,"Vue")){
   addScript("/libs/vue.js");
 }
+if(!Object.prototype.hasOwnProperty.call(window,"_")){
+  addScript("/libs/underscore.js");
+}
 
 function addScript(script_name){
   var tag = document.createElement("script");
