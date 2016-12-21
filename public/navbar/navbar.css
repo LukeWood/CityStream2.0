@@ -1,0 +1,152 @@
+
+.header {
+  background: #fff;
+  padding: 10px;
+  color: #aaaaaa;
+  margin-bottom: 1px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; }
+
+.header .page-flows .flow {
+  font-size: 20px;
+  color: #aaaaaa;
+  margin: 0 10px; }
+  .header .page-flows .flow:hover {
+    color: white; }
+  .header .page-flows .flow .disabled {
+    color: #5e5e5e; }
+
+.header .search {
+  margin-left: 1%; }
+  .header .search input {
+    border-radius: 15px;
+    border: none;
+    background: white;
+    color: #34363f;
+    padding-left: 30px;
+    outline: none;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/ios-search.svg);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 5px; }
+
+.header .user {
+  width: 300px;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.header .user i {
+  font-size: 20px; }
+  .header .user i:hover {
+    color: #02adf9;
+    cursor: pointer; }
+
+.header .user__info img {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.header .user__actions button {
+  background: none;
+  border: none; }
+
+.header .user__actions .dropdown-menu {
+  background: #f2f2f;
+  margin-top: 25px;
+  border-radius: 2px;
+  padding: 0;
+  border: none; }
+  .header .user__actions .dropdown-menu:before {
+    font-family: "Ionicons";
+    content: "\f365";
+    position: absolute;
+    top: -30px;
+    right: 7px;
+    color: #698b9b;
+    font-size: 36px; }
+  .header .user__actions .dropdown-menu a {
+    color: #aaaaaa;
+    transition: all 0.2s ease; }
+    .header .user__actions .dropdown-menu a:hover {
+      background: none;
+      transition: all 0.2s ease; }
+  .header .user__actions .dropdown-menu li {
+    padding: 10px;
+    margin: 0;
+    transition: all 0.2s ease; }
+    .header .user__actions .dropdown-menu li:hover {
+      background: #aaaaaa;
+      transition: all 0.2s ease; }
+      .header .user__actions .dropdown-menu li:hover a {
+        color: #c8c8c8;
+        transition: all 0.2s ease; }
+
+.content {
+  display: flex;
+  flex-flow: row wrap; }
+
+.content__left {
+  width: 15%; }
+
+.content__middle {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.content__right {
+  width: 15%; }
+
+@media (max-width: 1400px) {
+  .content__left {
+    width: 20%; }
+  .content__middle {
+    width: 80%; }
+  .content__right {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .content__left {
+    width: 100%; }
+  .content__middle {
+    width: 100%; } }
+
+.navigation {
+  padding: 15px;
+  background: #fff;
+  color: #aaaaaa;
+  overflow-y: scroll; }
+
+.navigation__list {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 15px; }
+
+.navigation__list__header:after {
+  font-family: "Ionicons";
+  content: "\f123"; }
+
+.navigation__list .active:after {
+  font-family: "Ionicons";
+  content: "\f126"; }
+
+.navigation__list__item {
+  color: #aaaaaa;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.navigation__list__item:hover {
+  color: #02adf9;
+  text-decoration: none;
+  border-right: 3px solid #0dfaf2; }
+
+.navigation__list__item i {
+  width: 25px;
+  display: block; }

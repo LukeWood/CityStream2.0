@@ -1,0 +1,12 @@
+body {
+  background: #34363f;
+  font-family: 'Roboto', sans-serif;
+}
+
+body a {
+  color: #aaaaaa;
+}
+
+body a:hover {
+  color: #c8c8c8;
+}
