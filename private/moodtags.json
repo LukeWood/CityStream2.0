@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Restaurants",
+    "bundles": "restaurants, cafes, bars",
+    "sections": ["fast-casual", "fine-dining", "outside-dining"]
+  },
+  {
+    "id": "2",
+    "title": "Bars",
+    "bundles": "Bars",
+    "sections": " "
+  },
+  {
+    "id": "3",
+    "title": "Nightclubs",
+    "bundles": "Nightclubs",
+    "sections": " "
+  },
+  {
+    "id": "4",
+    "title": "Cafes",
+    "bundles": "Cafes",
+    "sections": " "
+  },
+  {
+    "id": "5",
+    "title": "Theatre",
+    "bundles": "Theatre",
+    "sections": " "
+  },
+  {
+    "id": "6",
+    "title": "Outside",
+    "bundles": "Restaurants, Cafes, Bars",
+    "sections": " "
+  },
+  {
+    "id": "7",
+    "title": "Nearby",
+    "bundles": " Restaurants, Bars, Nightclubs, Cafes, Theatre",
+    "sections": " "
+  },
+  {
+    "id": "8",
+    "title": "Fancy Cocktails",
+    "bundles": "Restaurants, Cafes, Bars, Nightclubs",
+    "sections": " "
+  },
+  {
+    "id": "9",
+    "title": "View",
+    "bundles": "Restaurants, Bars",
+    "sections": " "
+  },
+  {
+    "id": "10",
+    "title": "Romantic",
+    "bundles": "Restaurants, Theatre",
+    "sections": " "
+  },
+  {
+    "id": "11",
+    "title": "Quick Bite",
+    "bundles": "Restaurants, Cafes",
+    "sections": " "
+  }
+]

@@ -1,0 +1,5 @@
+<div id="grid-container">
+      <transition-group name="flip-list" tag="div">
+      <square v-for="event in sorted" v-bind:event="event"  v-bind:key="event.id" ></square>
+      </transition>
+</div>
