@@ -5,25 +5,67 @@ Vue.component("square",{
 	`
  		<div v-bind:id=event.id v-bind:style=event.outerstyle>
 			<div  v-bind:style=event.styleObject v-bind:class=event.classObject style='border-radius:10%;'>
-				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto'></img>
+				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto' data-toggle="modal" data-target="#myModal"></img>
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
 						<a style='font-size: 12px; color: #fff; ' href='/templates/Spot-Profile.html'> {{event.venue}}		</a>
 						<div style=' font-size: 10px;'>   {{event.description}}		</div>
 			 </center>
-				<center style= 'display: block; margin-top:6px;'>
-					<div style = 'float:left; width:33.33%'>
-								<img src="img/icons/friends-placeholder.png">
-					</div>
-					<div style = 'float:left; ; width:33.33%'>
-								<img src="img/icons/time-placeholder.png">
-					</div>
-					<div style = 'float:left; ; width:33.33%'>
-							<div style='float: right; margin-right:20px;  height: 10px; '>
-								<p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>"
-							</div>
-					</div>
-				</center>
+			 <center style= 'display: block; margin-top:6px;'>
+				 <div style = 'float:left; width:33.33%'>
+							 <img src="img/icons/friends-placeholder.png">
+				 </div>
+				 <div style = 'float:left; ; width:33.33%'>
+							 <img src="img/icons/time-placeholder.png">
+				 </div>
+				 <div style = 'float:left; ; width:33.33%'>
+						 <div style='float: right; margin-right:20px;  height: 10px; '>
+							 <p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>"
+						 </div>
+				 </div>
+			 </center>
+
+			 <!-- Modal -->
+				 <div class="modal fade" id="myModal" role="dialog">
+					 <div class="modal-dialog">
+			 <!-- Modal content-->
+						 <div class="modal-content">
+							 <div class="modal-header">
+								 <button type="button" class="close" data-dismiss="modal">&times;</button>
+								 <h4 class="modal-title" style="color: #000;"> Business </h4>
+							 </div>
+						 <div class="modal-body">
+							  <iframe width="100%" height="50%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
+
+						 <div id="btns-container" style="margin-top:20px;">
+						 <table style="width:100%">
+						 		<tr>
+									<td width="100%" align="center">
+									<img src=../img/uber-ride-request-btn.png width="230px">
+									</td>
+								</tr>
+							</table>
+							<table style="width:100%">
+								<tr>
+										<td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="right">
+												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="tel:1-602-999-0056"> <i class="ion-ios-telephone"></i> Call </a>
+										</td>
+										<td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="center">
+												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="www.banditostexmex.com"> <i class="ion-log-out"> Website </a>
+										</td>
+										<td width="33.33%" align="left">
+												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="website" ><i class="ion-pricetags"> Offer </a>
+										</td>
+							  </tr>
+							</table>
+						 </div>
+				 </div>
+				 <div class="modal-footer">
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				 </div>
+			 </div>
+
+
 			</div>
 		</div>
 	`
