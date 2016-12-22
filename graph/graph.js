@@ -84,6 +84,7 @@ function graph(){
 	this.addEdge = addEdge.bind(this);
 	this.getTraversal = getTraversal.bind(this);
 	this.serialize = serialize.bind(this);
+	this.addUniEdge = (function(a,b){this.addEdge(a,b);this.addEdge(b,a)}).bind(this);
 }
 
 module.exports = graph;
