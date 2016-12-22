@@ -12,7 +12,6 @@ function graph(){
 	this.default_tags = [];
 	this.default_xps = [];
 
-
 	function addEdge(a,b){
 		if(!(a.val in nodes))
 			nodes[a.val] = new node(a.val,a.type)
