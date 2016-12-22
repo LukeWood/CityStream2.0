@@ -1,3 +1,6 @@
+.modal-backdrop.in { z-index: auto;}
+
+
 .header {
   background: #fff;
   padding: 10px;

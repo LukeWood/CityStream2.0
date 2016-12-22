@@ -7,6 +7,7 @@ body {
 .toggle-button{
   display: block;
   left: 0px;
+  font-size: 20px;
 }
 
 .slideout-menu {
@@ -20,6 +21,13 @@ body {
   z-index: 0;
   display: none;
 }
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #f8f8f8; /* A background-color is required */
+  min-height: 100vh;
+}
 
 h2{
   margin-top: 5px;
@@ -31,14 +39,6 @@ h2{
 
 .slideout-menu-right {
   right: 0;
-}
-
-.slideout-panel {
-  position: relative;
-  z-index: 1;
-  will-change: transform;
-  background-color: #f8f8f8; /* A background-color is required */
-  min-height: 100vh;
 }
 
 .slideout-open,
@@ -85,7 +85,9 @@ h2{
     color: #6a6f75;
     width: 200px;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 2ß55, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
+
+   /** .modal-backdrop.in { z-index: auto;} **/

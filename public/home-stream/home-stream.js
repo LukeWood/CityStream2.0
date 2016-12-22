@@ -47,7 +47,7 @@ Vue.component("square",{
 								 <h4 class="modal-title" style="color: #000;"> Business </h4>
 							 </div>
 						 <div class="modal-body">
-							  <iframe width="100%" height="50%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
+							  <iframe width="100%" height="300px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
 
 						 <div id="btns-container" style="margin-top:20px;">
 						 <table style="width:100%">
