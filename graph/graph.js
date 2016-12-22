@@ -14,7 +14,7 @@ function graph(){
 
 	function addEdge(a,b){
 		if(!(a.val in nodes))
-			nodes[a.val] = new node(a.val,a.type)
+			nodes[a.val] = new node(a.val,a.type);
 		if(!(b.val in nodes))
 			nodes[b.val] = new node(b.val,b.type);
 
@@ -43,8 +43,8 @@ function graph(){
 
 		function nxp(){
 			if(xpstack.length == 0){
-			// add random xps
-			return;
+				// add random xps
+				return "no more xps";
 			}
 			return xpstack.pop();
 		}
@@ -52,7 +52,7 @@ function graph(){
 		function nxt(){
 			if(tagstack.length == 0){
 				//add random tags
-				return;
+				return "no more tags";
 			}
 			return tagstack.pop();
 		}

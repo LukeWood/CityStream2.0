@@ -12,15 +12,6 @@ app.use(session({
   cookie: { secure: true }
 }));
 
-app.use(function(req,res,next){
-  if(!req.session.id){
-    req.session.id = gen_uid();
-  }
-  console.log(req.session.id);
-  next();
-
-});
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
