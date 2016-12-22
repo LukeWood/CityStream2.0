@@ -1,3 +1,4 @@
 {
-  "graph_path":"./graph/states/current.json"
+  "graph_path":"./graph/states/current.json",
+  "py_dump":"./database/graphdata/dump.json"
 }
