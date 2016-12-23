@@ -102,9 +102,26 @@ h2{
 /** moodtags container **/
 
 .moodtags-container {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.moodtag {
+  display: inline-flex;
+  padding: 4px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.moodtag-icon{
+  max-height: 20px;
+}
+
+.moodtag-label{
+  color: #3ca6f4;
+  margin-left: 2px;
 }
 
 /** privacy toggle **/
