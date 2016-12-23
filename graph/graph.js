@@ -30,7 +30,6 @@ function graph(){
 
 		var xpstack = this.default_xps.slice();
 		var tagstack = this.default_tags.slice();
-
 		function clicked(val){
 			if(!(val in nodes))
 				return false;

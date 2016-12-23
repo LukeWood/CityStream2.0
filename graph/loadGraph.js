@@ -11,6 +11,8 @@ function deserialize(fname){
       }
     }
   }
+  to_ret.default_xps = data.default_xps;
+  to_ret.default_tags = data.default_tags;
   return to_ret;
 }
 

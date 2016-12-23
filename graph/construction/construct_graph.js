@@ -11,10 +11,10 @@ this.default_xps = [];
 for(var key in information){
   if(!information.hasOwnProperty(key))
     continue;
+  g.default_tags.push(key);
 
   for(let i = 0; i < information[key].length; i++){
     g.addUniEdge({val:key,type:"tag"},{val:information[key][i],type:"xp"});
-    g.default_tags.push(key);
     g.default_xps.push(information[key][i]);
     for(let j = i+1; j < information[key].length; j++){
       g.addUniEdge({val:information[key][i],type:"xp"},{val:information[key][j],type:"xp"});

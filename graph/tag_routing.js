@@ -4,16 +4,16 @@ const loadGraph = require("./loadGraph.js");
 const getExperience = require("../database/getExperience.js");
 
 var g = loadGraph(config.graph_path);
-
 function ensure_traversal(id){
   if(!(id in traversals)){
+    console.log("adding to traversals");
     traversals[id] = g.getTraversal();
   }
 }
 
 function next_tag(req,res){
-  ensure_traversal(req.session.id);
-  var tag = traversals[req.session.id].nextTag();
+  ensure_traversal(req.sessionID);
+  var tag = traversals[req.sessionID].nextTag();
   res.send(JSON.stringify({
       url:null,
       tagname:tag
@@ -21,8 +21,8 @@ function next_tag(req,res){
 }
 
 function next_xp(req,res){
-  ensure_traversal(req.session.id);
-  var xp = traversals[req.session.id].nextXP();
+  ensure_traversal(req.sessionID);
+  var xp = traversals[req.sessionID].nextXP();
   res.send(JSON.stringify({
       url:null,
       name:xp
@@ -30,7 +30,7 @@ function next_xp(req,res){
 }
 
 function clicked(req,res){
-
+  //push everything onto that person's traversal.
 }
 
 module.exports = {

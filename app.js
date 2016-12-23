@@ -7,9 +7,9 @@ const gen_uid = require("./util/gen_uid.js");
 
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: true,
-  cookie: { secure: true }
+  cookie: {maxAge: 60000000}
 }));
 
 app.use(bodyParser.json());
