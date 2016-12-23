@@ -98,13 +98,15 @@ h2{
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
 
-   /** .modal-backdrop.in { z-index: auto;} **/
+    /** try to fix the modals **/
+   .modal-backdrop.in { z-index: auto;}
+
 /** moodtags container **/
 
 .moodtags-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .moodtag {
