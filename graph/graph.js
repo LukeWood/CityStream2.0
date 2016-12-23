@@ -21,6 +21,11 @@ function graph(){
 		nodes[a.val].children.push(b.val);
 	}
 
+	function addUniEdge(a,b){
+		addEdge(a,b);
+		addEdge(b,a);
+	}
+
 	function getTraversal(){
 
 		var xpstack = this.default_xps.slice();
@@ -84,7 +89,7 @@ function graph(){
 	this.addEdge = addEdge.bind(this);
 	this.getTraversal = getTraversal.bind(this);
 	this.serialize = serialize.bind(this);
-	this.addUniEdge = (function(a,b){this.addEdge(a,b);this.addEdge(b,a)}).bind(this);
+	this.addUniEdge = addUniEdge.bind(this);
 }
 
 module.exports = graph;
