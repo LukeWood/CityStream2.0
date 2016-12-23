@@ -20,7 +20,7 @@ Vue.component("square",{
 				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto' data-toggle="modal" data-target="#myModal"></img>
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
-						<a style='font-size: 12px; color: #fff; ' href='/templates/Spot-Profile.html'> {{event.venue}}		</a>
+						<a style='font-size: 12px; color: #fff; ' href='/business-profile/business-profile.html'> {{event.venue}}		</a>
 						<div style=' font-size: 10px;'>   {{event.description}}		</div>
 			 </center>
 			 <center style= 'display: block; margin-top:6px;'>
