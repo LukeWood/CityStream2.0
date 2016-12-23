@@ -15,6 +15,9 @@ for line in lines[1:]:
         d[mapping[i]] = data
     xps.append(d)
 
+with open("raw/tempdb.json","w") as f:
+    f.write(json.dumps(xps[:70]));
+
 xps = [x for x in xps if "Tags" in x and x["Tags"] != ""]
 
 for x in xps:
@@ -28,7 +31,6 @@ for x in xps:
             sets[tag.replace(" ","_")] = []
         sets[tag.replace(" ","_")].append(x["ID"])
 
-print(sets)
 
 with open("graphdata/dump.json","w") as f:
     f.write(json.dumps(sets));

@@ -22,14 +22,17 @@ function next_tag(req,res){
 
 function next_xp(req,res){
   ensure_traversal(req.sessionID);
-  var xp = traversals[req.sessionID].nextXP();
-  res.send(JSON.stringify({
-      url:null,
-      name:xp
-  }));
+  var xpid = traversals[req.sessionID].nextXP();
+  res.send(JSON.stringify(getExperience(xpid)));
 }
 
 function clicked(req,res){
+  var val = req.body.val;
+  ensure_traversal(req.sessionID);
+
+  traversal[req.sesssionID].clicked(val);
+
+  res.send(JSON.stringify({"error":false}));
   //push everything onto that person's traversal.
 }
 
