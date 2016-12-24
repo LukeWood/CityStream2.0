@@ -134,6 +134,16 @@ h2{
   margin-left: 2px;
 }
 
+.moodtag-label-mood{
+  color: #2a74aa;
+  margin-left: 2px;
+}
+
+.moodtag-label-interest{
+  color: #323232;
+  margin-left: 2px;
+}
+
 /** privacy toggle **/
 .privacy-container{
   display: flex;
