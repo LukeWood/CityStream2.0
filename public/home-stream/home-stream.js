@@ -87,65 +87,40 @@ Vue.component("moodtag",{
 	props: ["mood"],
 	template:
 	`
-			<li v-bind:id="mood.txt">{{mood.txt}}</li>
-	`
+		<div class="moodtag" >
+			<div class="moodtag-icon" >
+					<img src={{computeFPath(mood)}} width="18px" height="18px"/>
+			</div>
+			<div class="moodtag-label">
+				{{mood.replace("_"," ")}}
+			</div>
+		</div>
+		`,
+	methods:{
+		computeFPath(mood){
+			return "img/moodtags/"+mood+".png";
+		}
+	}
 });
 
-
+var mtags = new Vue({
+	el:"#moods",
+	data:{
+		moods:[]
+	}
+})
+for(var i = 0; i < 20; i++){
+	$.getJSON("/next_tag",function(tag){
+		mtags.moods.push(tag.tagname);
+	});
+}
 
 var timestamp = 0;
 var feed1 = new Vue({
 	el:"#grid-container",
 	data: {
 		events: []
-	},
-	methods:{
-					add_mood:function(tag){
-						var evts = this.events;
-						for(var i = 0; i < evts.length; i++){
-							var evt = evts[i];
-							for(var j = 0; j < evt.tags.length; j++){
-								if(evt.tags[j] === tag){
-									evt.score++;
-								}
-							}
-						}
-						this.events = evts;
-					},
-					remove_mood:function(tag){
-						var evts = this.events;
-						for(var i = 0; i < evts.length; i++){
-							var evt = evts[i];
-							for(var j = 0; j < evt.tags.length; j++){
-								if(evt.tags[j] === tag){
-									evt.score = evt.score-1;
-								}
-							}
-						}
-						this.events = evts;
-					}
-	},
-	computed: {
-    // a computed getter
-    sorted: function () {
-      // `this` points to the vm instance\
-			if(this.events.length){
-				var score = this.events[0].score;
-				var different = false;
-				for(var i = 0; i < this.events.length; i++){
-						if(this.events[i].score != score){
-								different = true;
-								break;
-						}
-				}
-				if(!different){
-						return _.shuffle(this.events);
-				}
-	      return this.events.sort(function(x,y){return x.score < y.score});
-			}
-			return [];
-    }
-  }
+	}
 });
 
 var current_moods = {};
@@ -169,31 +144,26 @@ function randomColor(){
 		return colors[colorIndex++ % colors.length];
 }
 
-var j = 0;
-$.getJSON("/getEvents",function(data){
-	data.forEach(function(event){
-		j++;
-		feed1.events.push(
-			{
-					outerstyle:{
-						display:"inline-block",
-						margin:"10px"
-					},
-					styleObject:{
-						width:"350px",
-						height:"360px",
-						backgroundColor:randomColor(),
-						display:"inline-block",
-						overflow:"hidden"
-					},
-					image:event.image,
-					title:event.title,
-					score:0,
-					id:j,
-					venue: event.venue,
-					tags:event.tags,
-					description: event.bio
-			}
-		);
-	});
+for(var j = 0; j < 25; j++){
+	$.getJSON("/next_xp",function(event){
+		feed1.events.push({
+			outerstyle:{
+				display:"inline-block",
+				margin:"10px"
+			},
+			styleObject:{
+				width:"350px",
+				height:"360px",
+				backgroundColor:randomColor(),
+				display:"inline-block",
+				overflow:"hidden"
+			},
+			image:event.Image,
+			title:event.Title,
+			id:j,
+			venue:event.Venue,
+			tag:event.Tags,
+			description:event.Bio
+		});
 });
+}

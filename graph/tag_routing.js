@@ -15,7 +15,6 @@ function next_tag(req,res){
   ensure_traversal(req.sessionID);
   var tag = traversals[req.sessionID].nextTag();
   res.send(JSON.stringify({
-      url:null,
       tagname:tag
   }));
 }

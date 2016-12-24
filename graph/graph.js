@@ -47,24 +47,22 @@ function graph(){
 
 		function nxp(){
 			if(xpstack.length == 0){
-				// add random xps
-				return "no more xps";
+				xpstack = this.default_xps.slice();
 			}
 			return xpstack.pop();
 		}
 
 		function nxt(){
 			if(tagstack.length == 0){
-				//add random tags
-				return "no more tags";
+				tagstack = this.default_tags.slice();
 			}
 			return tagstack.pop();
 		}
 
 		return {
 			clicked:clicked,
-			nextXP:nxp,
-			nextTag:nxt
+			nextXP:nxp.bind(this),
+			nextTag:nxt.bind(this)
 		};
 
 	}
