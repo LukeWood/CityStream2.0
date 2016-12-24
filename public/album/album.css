@@ -1,0 +1,76 @@
+.overview__albums {
+  width: 100%;
+  padding: 20px;
+  margin-top: 30px; }
+  .overview__albums__head {
+    border-bottom: 1px solid #698b9b;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .overview__albums__head .view-type {
+    color: #fff;
+    margin-bottom: 4px;
+  
+  }
+    .overview__albums__head .view-type .active {
+      background: #698b9b;
+      padding: 8px;
+      border-radius: 50%; }
+    .overview__albums__head .view-type i {
+      padding: 8px;
+      border-radius: 50%; }
+      .overview__albums__head .view-type i:hover {
+        padding: 8px;
+        border-radius: 50%;
+        color: #656565;
+        background: #0dfaf2;
+        cursor: pointer; }
+
+.album__info {
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: row wrap; }
+
+.album__info__art img {
+  width: 135px;
+  height: 135px; }
+
+.album__info__meta {
+  width: calc( 100% - 150px);
+  margin-left: 15px;
+  display: flex;
+  flex-flow: column wrap; }
+
+.album__info__meta .album__year {
+  color: #aaaaaa;
+  letter-spacing: 1px; }
+
+.album__info__meta .album__name {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 100; }
+
+.album__info__meta .album__actions {
+  margin-top: auto; }
+  .album__info__meta .album__actions .save {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 10px; }
+    .album__info__meta .album__actions .save:hover {
+      border-color: #1ed760; }
+  .album__info__meta .album__actions .more {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center; }
+
+.album .track__title {
+  width: 70%; }
+
+@media (max-width: 1200px) {
+  .album .tracks .track {
+    height: auto;
+    padding: 10px 0; } }
