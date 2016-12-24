@@ -63,6 +63,12 @@ h2{
 }
 
 /** search bar **/
+
+.search-bar-container{
+  background-color: #34363f
+}
+
+
 #search {
   margin-top: 180px;
 }
@@ -104,9 +110,11 @@ h2{
 /** moodtags container **/
 
 .moodtags-container {
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #34363f;
 }
 
 .moodtag {
