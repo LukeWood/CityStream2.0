@@ -245,3 +245,38 @@
 #spacer{
   min-height: 10px;
 }
+
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  outline: none; }
+  button:hover {
+    cursor: pointer; }
+
+.button-dark {
+  background: #0dfaf2;
+  color: #656565;
+  border: 1px solid #0dfaf2; }
+  .button-dark:hover {
+    background: #04dbd2;
+    border: 1px solid #0dfaf2;  }
+
+.button-light {
+  background: none;
+  color: #c8c8c8;
+  border: 1px solid #c8c8c8; }
+  .button-light:hover {
+    border-color: white;
+    color: white; }
+
+.section-title {
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin-top: 25px;
+  letter-spacing: 1.25px;
+  font-size: 13.2px;
+  margin-bottom: 10px; }
