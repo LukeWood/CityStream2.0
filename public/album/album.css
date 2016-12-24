@@ -1,6 +1,6 @@
 .overview__albums {
   width: 100%;
-  padding: 20px;
+  padding: 0 20 20 20;
   margin-top: 1px; }
   .overview__albums__head {
     border-bottom: 1px solid #698b9b;
@@ -49,18 +49,39 @@
 
 .album__info__meta .album__name {
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 100; }
 
-.album__info__meta .album__actions {
-  margin-top: auto; }
-  .album__info__meta .album__actions .save {
+.album__info__meta .album__description {
+    color: #bebebe;
+    font-size: 11px;
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .album__info__meta .album__creator {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 100;
+    }
+    .album__info__meta .album__stats {
+        color: #bebebe;
+        font-size: 13px;
+        font-weight: 100;
+      }
+
+.album__actions {
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #656565;
+}
+.album__actions .save {
     padding-left: 30px;
     padding-right: 30px;
     margin-right: 10px; }
-    .album__info__meta .album__actions .save:hover {
+.album__actions .save:hover {
       border-color: #1ed760; }
-  .album__info__meta .album__actions .more {
+.album__actions .more {
     width: 27px;
     height: 27px;
     border-radius: 50%;
@@ -191,7 +212,7 @@
       text-transform: uppercase; }
 
       .tracks .track__explicit .time {
-        margin-left: 20px; 
+        margin-left: 20px;
       }
 
     .tracks .track__plays {
@@ -220,3 +241,7 @@
         display: none; }
       .tracks .track__popularity {
         display: none; } }
+
+#spacer{
+  min-height: 10px;
+}
