@@ -212,7 +212,11 @@
       text-transform: uppercase; }
 
       .tracks .track__explicit .time {
-        margin-left: 20px;
+        margin-left: 70px;
+      }
+      .tracks .track__explicit .cost {
+        margin-left: 70px;
+        color: #fff;
       }
 
     .tracks .track__plays {
