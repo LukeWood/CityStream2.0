@@ -4,8 +4,9 @@
   height:100px;
   position:fixed;
   bottom:0;
+  z-index: 1;
   left:0;
-  max-height: 30px; 
+  max-height: 30px;
 }
 .current-track {
   background: #34363f;

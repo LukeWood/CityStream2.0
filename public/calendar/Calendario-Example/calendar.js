@@ -386,5 +386,6 @@
 
 var codropsEvents = {
 	'12-25-2016' : '<a href="#">Christmas</a>',
-	'12-31-2016' : '<span>New Year\'s Eve</span>'
+	'12-31-2016' : '<span>New Year\'s Eve</span>',
+	'12-27-2016' : '<span> Dance Class at the View </span>'
 };
