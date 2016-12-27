@@ -26,13 +26,15 @@ function next_xp(req,res){
 }
 
 function clicked(req,res){
+  if(req == null)
+    return;
   var val = req.body.val;
+  console.log("Clicked: ",val);
   ensure_traversal(req.sessionID);
 
   traversals[req.sessionID].clicked(val);
 
   res.send(JSON.stringify({"error":false}));
-  //push everything onto that person's traversal.
 }
 
 module.exports = {

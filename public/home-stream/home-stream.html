@@ -5,10 +5,11 @@
         <input name="q" type="text" size="40" placeholder=" Moodtags..." />
         <div class="moodtags-container">
           <div id="moods">
-            <moodtag v-for="mood in moods" v-bind:mood="mood"></moodtag>
-          </div>
-            <!-- insert moodtags here -->
+            <transition-group name="list" tag="div">
+              <moodtag v-for="mood in moods" v-bind:key="mood" v-bind:mood="mood" class="list-item"></moodtag>
+            </transition-group>
 
+          </div>
 
         </div>
 

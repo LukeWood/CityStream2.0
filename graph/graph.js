@@ -32,17 +32,20 @@ function graph(){
 
 		var xpstack = this.default_xps.slice();
 		var tagstack = this.default_tags.slice();
+
 		function clicked(val){
 			if(!(val in nodes))
 				return false;
 
 			var c = nodes[val].children;
 			for(let i = 0; i < c.length; i++){
-				if(nodes[c[i]].type =="xp")
+				if(nodes[c[i]].type =="xp"){
 					xpstack.push(c[i]);
-				else
+				}
+				else{
 					tagstack.push(c[i]);
-				visitied[c[i].val] = true;
+				}
+				visited[c[i].val] = true;
 			}
 
 			return true;

@@ -94,7 +94,7 @@ Vue.component("moodtag",{
 
 			</div>
 			<div class="moodtag-label">
-				{{mood.split("_").join(" ")}}
+				{{mood}}
 			</div>
 		</div>
 		`,
