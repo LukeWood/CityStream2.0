@@ -107,8 +107,6 @@ Vue.component("moodtag",{
 			var url = "/clicked";
 			var params = "val="+mood;
 			http.open("POST", url, true);
-			$("#"+mood).fadeOut();
-			delete_from_tags(mood);
 			//Send the proper header information along with the request
 			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
