@@ -37,7 +37,6 @@ for x in xps:
 all_tags = []
 for key in sets:
     all_tags.append(key)
-print(all_tags);
 
 with open("graphdata/dump.json","w") as f:
     f.write(json.dumps(sets));
