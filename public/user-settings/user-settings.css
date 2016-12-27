@@ -613,6 +613,12 @@
   color: #fff;
 }
 
+.form-control {
+  max-width: 400px;
+  margin: auto; 
+}
+
+
 legend {
   color: #fff;
 }
