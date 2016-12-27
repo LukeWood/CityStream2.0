@@ -87,7 +87,7 @@ Vue.component("moodtag",{
 	props: ["mood"],
 	template:
 	`
-		<div class="moodtag" v-on:click="handleClicks(mood)">
+		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
 			</div>
@@ -105,13 +105,14 @@ Vue.component("moodtag",{
 			var url = "/clicked";
 			var params = "val="+mood;
 			http.open("POST", url, true);
-
+			$("#"+mood).fadeOut();
 			//Send the proper header information along with the request
 			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 			http.onreadystatechange = function() {//Call a function when the state changes.
 			    if(http.readyState == 4 && http.status == 200) {
-						add_five_tags();
+						add_five_xps();
+						next_tag();
 			    }
 			}
 			http.send(params);
@@ -170,8 +171,12 @@ for(var j = 0; j < 25; j++){
 		});
 });
 }
-
-function add_five_tags(){
+function next_tag(){
+	$.getJSON("/next_tag",function(tag){
+		mtags.moods.unshift(tag.tagname);
+	});
+}
+function add_five_xps(){
 	for(var i = 0; i <5; i++){
 		$.getJSON("/next_xp",function(event){
 			feed1.events.unshift({
