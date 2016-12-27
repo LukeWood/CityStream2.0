@@ -29,7 +29,7 @@ function clicked(req,res){
   var val = req.body.val;
   ensure_traversal(req.sessionID);
 
-  traversal[req.sesssionID].clicked(val);
+  traversals[req.sessionID].clicked(val);
 
   res.send(JSON.stringify({"error":false}));
   //push everything onto that person's traversal.

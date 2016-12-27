@@ -40,6 +40,7 @@ function graph(){
 					xpstack.push(c[i]);
 				else
 					tagstack.push(c[i]);
+				visitied[c[i].val] = true;
 			}
 
 			return true;

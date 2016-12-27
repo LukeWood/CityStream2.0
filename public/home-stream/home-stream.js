@@ -87,7 +87,7 @@ Vue.component("moodtag",{
 	props: ["mood"],
 	template:
 	`
-		<div class="moodtag" >
+		<div class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
 			</div>
@@ -99,6 +99,22 @@ Vue.component("moodtag",{
 	methods:{
 		computeFPath(mood){
 			return "img/moodtags/"+mood+".png";
+		},
+		handleClicks(mood){
+			var http = new XMLHttpRequest();
+			var url = "/clicked";
+			var params = "val="+mood;
+			http.open("POST", url, true);
+
+			//Send the proper header information along with the request
+			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+			http.onreadystatechange = function() {//Call a function when the state changes.
+			    if(http.readyState == 4 && http.status == 200) {
+						add_five_tags();
+			    }
+			}
+			http.send(params);
 		}
 	}
 });
@@ -123,19 +139,6 @@ var feed1 = new Vue({
 	}
 });
 
-var current_moods = {};
-
-function toggle_mood(mood){
-	if(current_moods.hasOwnProperty(mood) && current_moods[mood]){
-			feed1.remove_mood(mood);
-			current_moods[mood] = false;
-	}
-	else{
-		current_moods[mood] = true;
-		feed1.add_mood(mood);
-	}
-	console.log(current_moods);
-}
 
 var colorIndex = 0;
 function randomColor(){
@@ -166,4 +169,30 @@ for(var j = 0; j < 25; j++){
 			description:event.Bio
 		});
 });
+}
+
+function add_five_tags(){
+	for(var i = 0; i <5; i++){
+		$.getJSON("/next_xp",function(event){
+			feed1.events.unshift({
+				outerstyle:{
+					display:"inline-block",
+					margin:"10px"
+				},
+				styleObject:{
+					width:"350px",
+					height:"360px",
+					backgroundColor:randomColor(),
+					display:"inline-block",
+					overflow:"hidden"
+				},
+				image:event.Image,
+				title:event.Title,
+				id:j,
+				venue:event.Venue,
+				tag:event.Tags,
+				description:event.Bio
+			});
+	});
+	}
 }
