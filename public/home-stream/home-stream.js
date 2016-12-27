@@ -89,10 +89,10 @@ Vue.component("moodtag",{
 	`
 		<div class="moodtag" >
 			<div class="moodtag-icon" >
-					<img src={{computeFPath(mood)}} width="18px" height="18px"/>
+					<img v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
 			</div>
 			<div class="moodtag-label">
-				{{mood.replace("_"," ")}}
+				{{mood.split("_").join(" ")}}
 			</div>
 		</div>
 		`,
