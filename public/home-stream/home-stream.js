@@ -90,6 +90,8 @@ Vue.component("moodtag",{
 		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
+					<img v-else width="18px" height="18px"/>
+
 			</div>
 			<div class="moodtag-label">
 				{{mood.split("_").join(" ")}}
@@ -106,6 +108,7 @@ Vue.component("moodtag",{
 			var params = "val="+mood;
 			http.open("POST", url, true);
 			$("#"+mood).fadeOut();
+			delete_from_tags(mood);
 			//Send the proper header information along with the request
 			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
@@ -137,6 +140,16 @@ var mtags = new Vue({
 		moods:[]
 	}
 })
+
+function delete_from_tags(mood){
+	var index = mtags.moods.indexOf(mood);
+	if (index > -1) {
+			var cp = mtags.moods.slice();
+	   	cp.splice(index, 1);
+			mtags.moods = cp;
+	}
+}
+
 for(var i = 0; i < 20; i++){
 	$.getJSON("/next_tag",function(tag){
 		mtags.moods.push(tag.tagname);
@@ -184,12 +197,16 @@ for(var j = 0; j < 25; j++){
 }
 
 function next_tag(){
-	for(var i = 0; i < 3; i++)
+	mtags.moods = [];
+
+	for(var i = 0; i < 25; i++){
 		$.getJSON("/next_tag",function(tag){
-			mtags.moods.unshift(tag.tagname);
-			mtags.moods.pop();
+			mtags.moods.push(tag.tagname);
 		});
+	}
+	mtags.moods = temp;
 }
+
 
 function add_five_xps(){
 	for(var i = 0; i <5; i++){
