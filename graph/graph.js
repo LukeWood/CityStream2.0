@@ -8,6 +8,8 @@ function node(val,type){
 
 function graph(){
 
+	var visited = Object.create(null);
+
 	var nodes = Object.create(null);
 	this.default_tags = [];
 	this.default_xps = [];
@@ -30,16 +32,20 @@ function graph(){
 
 		var xpstack = this.default_xps.slice();
 		var tagstack = this.default_tags.slice();
+
 		function clicked(val){
 			if(!(val in nodes))
 				return false;
 
 			var c = nodes[val].children;
 			for(let i = 0; i < c.length; i++){
-				if(nodes[c[i]].type =="xp")
+				if(nodes[c[i]].type =="xp"){
 					xpstack.push(c[i]);
-				else
+				}
+				else{
 					tagstack.push(c[i]);
+				}
+				visited[c[i].val] = true;
 			}
 
 			return true;
@@ -47,24 +53,29 @@ function graph(){
 
 		function nxp(){
 			if(xpstack.length == 0){
-				// add random xps
-				return "no more xps";
+				xpstack = this.default_xps.slice();
 			}
 			return xpstack.pop();
 		}
 
 		function nxt(){
 			if(tagstack.length == 0){
-				//add random tags
-				return "no more tags";
+				tagstack = this.default_tags.slice();
+				visited = Object.create(null);
+				console.log("resetting tagstack");
 			}
-			return tagstack.pop();
+			var p = tagstack.pop();
+			if(p in visited){
+				return nxt.call(this);
+			}
+			visited[p] = true;
+			return p;
 		}
 
 		return {
 			clicked:clicked,
-			nextXP:nxp,
-			nextTag:nxt
+			nextXP:nxp.bind(this),
+			nextTag:nxt.bind(this)
 		};
 
 	}

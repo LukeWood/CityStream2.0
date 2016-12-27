@@ -15,9 +15,9 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.get("/getEvents", require("./routes/getEvents.js"));
 app.get("/next_xp",tag_routing.next_xp);
 app.get("/next_tag",tag_routing.next_tag);
+
 app.post("/clicked",tag_routing.clicked);
 
 app.use(express.static("public"));
