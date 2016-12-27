@@ -89,7 +89,7 @@ Vue.component("moodtag",{
 	`
 		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
-					<img v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
+					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
 			</div>
 			<div class="moodtag-label">
 				{{mood.split("_").join(" ")}}
@@ -116,7 +116,18 @@ Vue.component("moodtag",{
 			    }
 			}
 			http.send(params);
-		}
+		},
+		imageExists(image_url){
+
+	    var http = new XMLHttpRequest();
+
+	    http.open('HEAD', image_url, false);
+	    http.send();
+
+	    return http.status != 404;
+
+	}
+
 	}
 });
 
@@ -171,11 +182,15 @@ for(var j = 0; j < 25; j++){
 		});
 });
 }
+
 function next_tag(){
-	$.getJSON("/next_tag",function(tag){
-		mtags.moods.unshift(tag.tagname);
-	});
+	for(var i = 0; i < 3; i++)
+		$.getJSON("/next_tag",function(tag){
+			mtags.moods.unshift(tag.tagname);
+			mtags.moods.pop();
+		});
 }
+
 function add_five_xps(){
 	for(var i = 0; i <5; i++){
 		$.getJSON("/next_xp",function(event){
