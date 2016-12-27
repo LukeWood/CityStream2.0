@@ -32,7 +32,7 @@ Vue.component("square",{
 				 </div>
 				 <div style = 'float:left; ; width:33.33%'>
 						 <div style='float: right; margin-right:20px;  height: 10px; '>
-							 <p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>"
+							 <p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>
 						 </div>
 				 </div>
 			 </center>
