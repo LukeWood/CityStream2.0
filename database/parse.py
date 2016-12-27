@@ -7,7 +7,6 @@ lines = [x[1:20] for x in lines]
 for i,field in enumerate(lines[0]):
     mapping[i] = field
 
-
 xps = []
 for line in lines[1:]:
     d = {}
@@ -35,6 +34,10 @@ for x in xps:
             sets[tag.replace(" ","_")] = []
         sets[tag.replace(" ","_")].append(x["ID"])
 
+all_tags = []
+for key in sets:
+    all_tags.append(key)
+print(all_tags);
 
 with open("graphdata/dump.json","w") as f:
     f.write(json.dumps(sets));

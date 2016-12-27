@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/next_xp",tag_routing.next_xp);
 app.get("/next_tag",tag_routing.next_tag);
+
 app.post("/clicked",tag_routing.clicked);
 
 app.use(express.static("public"));
