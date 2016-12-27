@@ -8,6 +8,8 @@ function node(val,type){
 
 function graph(){
 
+	var visited = Object.create(null);
+
 	var nodes = Object.create(null);
 	this.default_tags = [];
 	this.default_xps = [];
@@ -56,8 +58,15 @@ function graph(){
 		function nxt(){
 			if(tagstack.length == 0){
 				tagstack = this.default_tags.slice();
+				visited = Object.create(null);
+				console.log("resetting tagstack");
 			}
-			return tagstack.pop();
+			var p = tagstack.pop();
+			if(p in visited){
+				return nxt.call(this);
+			}
+			visited[p] = true;
+			return p;
 		}
 
 		return {

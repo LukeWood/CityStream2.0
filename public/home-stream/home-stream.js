@@ -148,7 +148,7 @@ function delete_from_tags(mood){
 	}
 }
 
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 10; i++){
 	$.getJSON("/next_tag",function(tag){
 		mtags.moods.push(tag.tagname);
 	});
@@ -197,12 +197,11 @@ for(var j = 0; j < 25; j++){
 function next_tag(){
 	mtags.moods = [];
 
-	for(var i = 0; i < 25; i++){
+	for(var i = 0; i < 10; i++){
 		$.getJSON("/next_tag",function(tag){
 			mtags.moods.push(tag.tagname);
 		});
 	}
-	mtags.moods = temp;
 }
 
 

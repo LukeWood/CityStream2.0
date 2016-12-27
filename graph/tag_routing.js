@@ -6,7 +6,6 @@ const getExperience = require("../database/getExperience.js");
 var g = loadGraph(config.graph_path);
 function ensure_traversal(id){
   if(!(id in traversals)){
-    console.log("adding to traversals");
     traversals[id] = g.getTraversal();
   }
 }
@@ -22,6 +21,7 @@ function next_tag(req,res){
 function next_xp(req,res){
   ensure_traversal(req.sessionID);
   var xpid = traversals[req.sessionID].nextXP();
+
   res.send(JSON.stringify(getExperience(xpid)));
 }
 
