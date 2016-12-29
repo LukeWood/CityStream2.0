@@ -44,7 +44,7 @@ Vue.component("square",{
 						 <div class="modal-content">
 							 <div class="modal-header">
 								 <button type="button" class="close" data-dismiss="modal">&times;</button>
-								 <h4 class="modal-title" style="color: #000;"> Business </h4>
+								 <h4 class="modal-title" style="color: #000;"> Bandito's Tex Mex </h4>
 							 </div>
 						 <div class="modal-body">
 							  <iframe width="100%" height="300px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
