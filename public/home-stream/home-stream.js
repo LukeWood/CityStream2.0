@@ -231,6 +231,7 @@ function add_five_xps(){
 				if(i == 5){
 					while(temp.length != 0 ){
 						feed1.events.unshift(temp.pop());
+						feed1.events.pop();
 					}
 				}
 				else{
