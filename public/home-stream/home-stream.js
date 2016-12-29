@@ -226,7 +226,7 @@ function add_five_xps(){
 					id:j,
 					venue:event.Venue,
 					tag:event.Tags,
-					description:event.Bio
+					description:event.Description
 				});
 				if(i == 5){
 					while(temp.length != 0 ){
