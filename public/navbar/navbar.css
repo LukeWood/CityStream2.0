@@ -1,4 +1,23 @@
+.navbar {
+  background-color: #fff;
+  border-radius: 0px;
+  margin-bottom: 1px;
+}
 
+.navbar-toggle .icon-bar {
+    background-color: #34363f;
+}
+
+.user__info__img img {
+
+  margin: 5px ;
+}
+
+
+
+
+
+/*
 .header {
   background: #fff;
   padding: 10px;
