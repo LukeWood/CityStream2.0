@@ -24,7 +24,7 @@ app.get("/img_exist",function(req,res){
     res.send(JSON.stringify({success:false}));
     return;
   }
-  path.exists(req.query.fname, function(exists) {
+  path.exists("public/"+req.query.fname, function(exists) {
     if (exists) {
       res.send(JSON.stringify({success:true}));
     }
