@@ -189,7 +189,7 @@ for(var j = 0; j < 25; j++){
 			id:j,
 			venue:event.Venue,
 			tag:event.Tags,
-			description:event.Bio
+			description:event.Description
 		});
 });
 }
