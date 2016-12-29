@@ -159,7 +159,12 @@ var feed1 = new Vue({
 	el:"#grid-container",
 	data: {
 		events: []
-	}
+	},
+	methods: {
+	 shuffle: function () {
+		 this.events = _.shuffle(this.events)
+	 }
+ }
 });
 
 

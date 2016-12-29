@@ -27,7 +27,8 @@
         <button class="toggle-button"> <i class="ion-gear-a"></i> </button>
         <h2>Home Stream</h2>
       </header>
-
+      
+      <button v-on:click="shuffle">Shuffle</button>
       <div id="grid-container">
         <transition-group name="flip-list" tag="div">
           <square v-for="event in events" v-bind:event="event"  v-bind:key="event.id" ></square>
