@@ -90,7 +90,7 @@ Vue.component("moodtag",{
 		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
-					<img v-else width="18px" height="18px"/>
+					<img style="opacity:0;" v-else width="18px" height="18px"/>
 
 			</div>
 			<div class="moodtag-label">

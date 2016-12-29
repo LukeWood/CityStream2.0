@@ -29,7 +29,7 @@ function clicked(req,res){
   if(req == null)
     return;
   var val = req.body.val;
-  console.log("Clicked: ",val);
+
   ensure_traversal(req.sessionID);
 
   traversals[req.sessionID].clicked(val);
