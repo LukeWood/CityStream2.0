@@ -206,27 +206,36 @@ function next_tag(){
 
 
 function add_five_xps(){
-	for(var i = 0; i <5; i++){
-		$.getJSON("/next_xp",function(event){
-			feed1.events.unshift({
-				outerstyle:{
-					display:"inline-block",
-					margin:"10px"
-				},
-				styleObject:{
-					width:"350px",
-					height:"360px",
-					backgroundColor:randomColor(),
-					display:"inline-block",
-					overflow:"hidden"
-				},
-				image:event.Image,
-				title:event.Title,
-				id:j,
-				venue:event.Venue,
-				tag:event.Tags,
-				description:event.Bio
+	var temp = [];
+	(function cb(i){
+			$.getJSON("/next_xp",function(event){
+				temp.push({
+					outerstyle:{
+						display:"inline-block",
+						margin:"10px"
+					},
+					styleObject:{
+						width:"350px",
+						height:"360px",
+						backgroundColor:randomColor(),
+						display:"inline-block",
+						overflow:"hidden"
+					},
+					image:event.Image,
+					title:event.Title,
+					id:j,
+					venue:event.Venue,
+					tag:event.Tags,
+					description:event.Bio
+				});
+				if(i == 5){
+					while(temp.length != 0 ){
+						feed1.events.unshift(temp.pop());
+					}
+				}
+				else{
+					cb(i+1);
+				}
 			});
-	});
-	}
+	})(0);
 }
