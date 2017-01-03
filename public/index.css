@@ -13,7 +13,8 @@ body a:hover {
 
 .content {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  max-width: 100%; }
 
 .content__left {
   width: 15%; }
@@ -26,6 +27,7 @@ body a:hover {
 
 .content__right {
   width: 15%; }
+
 
 @media (max-width: 1400px) {
   .content__left {
@@ -40,3 +42,8 @@ body a:hover {
     width: 100%; }
   .content__middle {
     width: 100%; } }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
