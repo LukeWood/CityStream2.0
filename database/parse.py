@@ -41,4 +41,22 @@ for key in sets:
 with open("graphdata/dump.json","w") as f:
     f.write(json.dumps(sets));
 
-#next insert into a mongodb file
+#count common
+
+
+tag_refs = {}
+
+for x in all_tags:
+    all_values = []
+    for y in all_tags:
+        if(x == y):
+            continue
+        common = len(set(sets[x]) & set(sets[y]))
+        all_values.append((y,common))
+    all_values.sort(key=lambda a:-a[1])
+    tag_refs[x] = [x[0] for x in all_values]
+
+    #count common
+
+with open("../graph/states/tag_stack_mapping.json","w") as f:
+    f.write(json.dumps(tag_refs));

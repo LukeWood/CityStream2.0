@@ -1,4 +1,5 @@
 var fs = require("fs");
+var tag_stack_mapping = require("states/tag_stack_mapping.json");
 
 function node(val,type){
 	this.val = val;
