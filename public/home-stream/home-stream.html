@@ -34,7 +34,7 @@
 
       <div id="grid-container">
         <button v-on:click="shuffle">Shuffle</button>
-        <transition-group name="fade" tag="div">
+        <transition-group name="slide-fade" tag="div">
           <square v-for="event in events" v-bind:event="event"  v-bind:key="event.id">
             {{ event }}
           </square>
