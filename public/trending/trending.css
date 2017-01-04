@@ -1,0 +1,77 @@
+h1 {
+  color: #000;
+  margin-bottom: 0px;
+}
+
+.trending-container{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  justify-content: left;
+  padding: 10px;
+  margin: 0px 20px 20px 20px;
+  background: #cebe29;
+  background: -moz-linear-gradient(-45deg, #cebe29 0%, #9b1f50 33%, #2989d8 71%, #89b4ff 91%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cebe29), color-stop(33%,#9b1f50), color-stop(71%,#2989d8), color-stop(91%,#89b4ff));
+  background: -webkit-linear-gradient(-45deg, #cebe29 0%,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+  background: -o-linear-gradient(-45deg, #cebe29 0%,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+  background: -ms-linear-gradient(-45deg, #cebe29 0%,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+  background: linear-gradient(135deg, #0dfaf2, #34363f);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cebe29', endColorstr='#89b4ff',GradientType=1 );
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% ;
+  opacity: 0.8
+}
+
+.album__likes{
+  color: #f8f8f8;
+  float: left;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.album-cover{
+    opacity: 1;
+    display: block;
+    height: 100px;
+    background-color: #000;
+    border-radius: 18px;
+    margin: 10px;
+}
+
+.album__picture {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+ .album__picture img{
+   border-top-left-radius:10px;
+   border-bottom-left-radius:10px;
+ }
+
+.album__title {
+  color: #02adf9;
+  width: 100%;
+  padding-top: 15px;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 110px;
+}
+
+.album__author {
+  color: #c6c6c6;
+  margin-left: 0px;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 110px;
+
+}
+
+.album__description{
+  color: #c6c6c6;
+  font-size: 10px;
+  text-align: left;
+  padding-left: 110px;
+
+}
