@@ -229,3 +229,7 @@ input#toggle:checked + label:after {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+
+.flip-list-move {
+  transition: transform 1s;
+}

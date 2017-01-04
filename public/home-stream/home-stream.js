@@ -21,7 +21,7 @@ Vue.component("square",{
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
 						<a style='font-size: 12px; color: #fff; ' href='/business-profile/business-profile.html'> {{event.venue}}		</a>
-						<div style=' font-size: 10px;'>   {{event.description}}		</div>
+						<div style=' font-size: 10px; font-size: 10px; max-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;'>   {{event.description}}		</div>
 			 </center>
 			 <center style= 'display: block; margin-top:6px;'>
 				 <div style = 'float:left; width:33.33%'>
@@ -90,7 +90,7 @@ Vue.component("moodtag",{
 		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
-					<img v-else src="img/moodtags/default.png" width="18px" height="18px"/>
+					<img v-else src="img/moodtags/default2.png" width="18px" height="18px"/>
 
 			</div>
 			<div class="moodtag-label">
