@@ -1,4 +1,5 @@
 var fs = require("fs");
+var tag_stack_mapping = require("./states/tag_stack_mapping.json");
 
 function node(val,type){
 	this.val = val;
@@ -38,6 +39,11 @@ function graph(){
 				return false;
 
 			var c = nodes[val].children;
+
+			if(! (nodes[val].type =="xp")){
+				tagstack = tag_stack_mapping[val].slice();
+			}
+
 			for(let i = 0; i < c.length; i++){
 				if(nodes[c[i]].type =="xp"){
 					xpstack.push(c[i]);
