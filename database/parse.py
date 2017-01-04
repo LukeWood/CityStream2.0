@@ -53,7 +53,7 @@ for x in all_tags:
             continue
         common = len(set(sets[x]) & set(sets[y]))
         all_values.append((y,common))
-    all_values.sort(key=lambda a:-a[1])
+    all_values.sort(key=lambda a:a[1])
     tag_refs[x] = [x[0] for x in all_values]
 
     #count common

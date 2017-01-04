@@ -39,6 +39,11 @@ function graph(){
 				return false;
 
 			var c = nodes[val].children;
+
+			if(! (nodes[val].type =="xp")){
+				tagstack = tag_stack_mapping[val].slice();
+			}
+
 			for(let i = 0; i < c.length; i++){
 				if(nodes[c[i]].type =="xp"){
 					xpstack.push(c[i]);
