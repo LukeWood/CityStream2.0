@@ -47,7 +47,6 @@ function graph(){
 				}
 				visited[c[i].val] = true;
 			}
-
 			return true;
 		}
 
@@ -62,7 +61,6 @@ function graph(){
 			if(tagstack.length == 0){
 				tagstack = this.default_tags.slice();
 				visited = Object.create(null);
-				console.log("resetting tagstack");
 			}
 			var p = tagstack.pop();
 			if(p in visited){

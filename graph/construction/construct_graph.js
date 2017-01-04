@@ -7,7 +7,6 @@ var g = new graph();
 
 var information = require("../../database/graphdata/dump.json");
 
-
 var counts = Object.create(null);
 
 for(var key in information){
@@ -21,12 +20,15 @@ for(var key in information){
 
   for(let i = 0; i < information[key].length; i++){
     g.addUniEdge({val:key,type:"tag"},{val:information[key][i],type:"xp"});
+
     g.default_xps.push(information[key][i]);
+
     for(let j = i+1; j < information[key].length; j++){
       g.addUniEdge({val:information[key][i],type:"xp"},{val:information[key][j],type:"xp"});
     }
   }
 }
+//topological sort to find the best XPS.
 
 var h = new heap(function(a,b){return counts[b]-counts[a];});
 
@@ -37,7 +39,7 @@ for(key in counts){
   }
   if(counts[key] > counts[h.peek()])
   {
-    h.pushpop(key);
+    h.pushpop(key, function(a,b){return counts[b] - counts[a];});
   }
 }
 

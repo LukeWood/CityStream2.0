@@ -7,7 +7,13 @@ function deserialize(fname){
   for(var i in data.nodes){
     if(data.nodes.hasOwnProperty(i)){
       for(let j = 0; j < data.nodes[i].children.length; j++){
-        to_ret.addEdge(data.nodes[i].val,data.nodes[i].children[j]);
+        to_ret.addEdge({
+          val:data.nodes[i].val,
+          type:data.nodes[i].type
+        },{
+          val:data.nodes[i].children[j],
+          type:data.nodes[data.nodes[i].children[j]].type}
+        );
       }
     }
   }
