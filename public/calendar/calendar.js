@@ -1,7 +1,11 @@
 var usersEvents = {
 	'12-25-2016' : '<a href="#">Christmas</a>',
 	'12-31-2016' : '<span>New Year\'s Eve</span>',
-	'12-29-2016' : '<span> Dance Class </span>'
+	'12-29-2016' : '<span> Dance Class </span>',
+	'01-07-2017' : '<span> Yoga Class </span>',
+	'01-09-2017' : '<span> Yoga Class </span>',
+	'01-10-2017' : '<span> Dance Studio </span>',
+	'01-07-2017' : '<span> Rangers Game </span>', 
 };
 
 

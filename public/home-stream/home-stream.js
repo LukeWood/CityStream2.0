@@ -175,7 +175,7 @@ function randomColor(){
 		return colors[colorIndex++ % colors.length];
 }
 
-for(var j = 0; j < 25; j++){
+for(var j = 0; j < 50; j++){
 	$.getJSON("/next_xp",function(event){
 		feed1.events.push({
 			outerstyle:{

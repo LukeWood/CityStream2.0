@@ -13,7 +13,11 @@
   margin-left: 15px;
 }
 
-
+.prof__img img {
+  max-width: 30px;
+  max-height: 23px;
+  border-radius: 50%;
+  display: inline-block; }
 
 
 

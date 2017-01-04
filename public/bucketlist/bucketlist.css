@@ -1,3 +1,8 @@
+body{
+  background-color: #34363f; 
+}
+
+
 .overview__albums {
   width: 100%;
   padding: 0 20 20 20;

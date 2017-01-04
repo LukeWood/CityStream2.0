@@ -40,6 +40,8 @@ function addComponent(component,div){
             div.innerHTML = response;
             var scriptStr = "/"+component+"/"+component+".js";
             addScript(scriptStr);
+            var cssStr = "/"+component+"/"+component+".css";
+            addScript(cssStr);
         }
     },
     error: function (jqXHR, status, errorThrown) {
