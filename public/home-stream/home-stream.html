@@ -5,7 +5,7 @@
         <input name="q" type="text" size="40" placeholder=" Moodtags..." />
         <div class="moodtags-container">
           <div id="moods">
-            <transition-group name="component-fade" mode="out-in" tag="div">
+            <transition-group name="fade" mode="out-in" tag="div">
               <moodtag v-for="mood in moods" v-bind:key="mood" v-bind:mood="mood" class="list-item"></moodtag>
             </transition-group>
 

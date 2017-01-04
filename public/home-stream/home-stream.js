@@ -17,7 +17,16 @@ Vue.component("square",{
 	`
  		<div v-bind:id=event.id v-bind:style=event.outerstyle>
 			<div  v-bind:style=event.styleObject v-bind:class=event.classObject style='border-radius:10%;'>
+			<div style='position: relative'>
 				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto' data-toggle="modal" data-target="#myModal"></img>
+				<div style='position:absolute; bottom:5px; left:10px; color: #fff; '>
+					<i class="ion-thumbsup"></i> 304 likes
+				</div>
+				<div style='position:absolute; top:10px; right:15px; color: #fff; opacity: 0.7; '>
+					XP
+				</div>
+			</div>
+
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
 						<a style='font-size: 12px; color: #fff; ' href='/business-profile/business-profile.html'> {{event.venue}}		</a>
