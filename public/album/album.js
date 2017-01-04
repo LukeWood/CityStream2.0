@@ -1,3 +1,15 @@
+//forcing
+var slideout = new Slideout({
+	'panel': document.getElementById('panel'),
+	'menu': document.getElementById('menu'),
+	'padding': 256,
+	'tolerance': 70
+});
+
+// Toggle button
+document.querySelector('.toggle-button').addEventListener('click', function() {
+	slideout.toggle();
+});
 
 Vue.component("square",{
 	props: ["event"],
@@ -20,7 +32,7 @@ Vue.component("square",{
 				 </div>
 				 <div style = 'float:left; ; width:33.33%'>
 						 <div style='float: right; margin-right:20px;  height: 10px; '>
-							 <p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>"
+							 <p style="color:#fff; font-size:14px; margin-top:5px;"> $$$ </p>
 						 </div>
 				 </div>
 			 </center>
@@ -32,7 +44,7 @@ Vue.component("square",{
 						 <div class="modal-content">
 							 <div class="modal-header">
 								 <button type="button" class="close" data-dismiss="modal">&times;</button>
-								 <h4 class="modal-title" style="color: #000;"> Business </h4>
+								 <h4 class="modal-title" style="color: #000;"> {{event.title}} </h4>
 							 </div>
 						 <div class="modal-body">
 							  <iframe width="100%" height="300px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
@@ -71,6 +83,76 @@ Vue.component("square",{
 	`
 });
 
+Vue.component("moodtag",{
+	props: ["mood"],
+	template:
+	`
+		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
+			<div class="moodtag-icon" >
+					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
+					<img v-else src="img/moodtags/default.png" width="18px" height="18px"/>
+
+			</div>
+			<div class="moodtag-label">
+				{{mood? mood.split("_").join(" "):""}}
+			</div>
+		</div>
+		`,
+	methods:{
+		computeFPath(mood){
+			return "img/moodtags/"+mood+".png";
+		},
+		handleClicks(mood){
+			var http = new XMLHttpRequest();
+			var url = "/clicked";
+			var params = "val="+mood;
+			http.open("POST", url, true);
+			//Send the proper header information along with the request
+			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+			http.onreadystatechange = function() {//Call a function when the state changes.
+			    if(http.readyState == 4 && http.status == 200) {
+						add_five_xps();
+						next_tag();
+			    }
+			}
+			http.send(params);
+		},
+		imageExists(image_url){
+
+	    var http = new XMLHttpRequest();
+
+	    http.open('HEAD', image_url, false);
+	    http.send();
+
+	    return http.status != 404;
+
+	}
+
+	}
+});
+
+var mtags = new Vue({
+	el:"#moods",
+	data:{
+		moods:[]
+	}
+})
+
+function delete_from_tags(mood){
+	var index = mtags.moods.indexOf(mood);
+	if (index > -1) {
+			var cp = mtags.moods.slice();
+	   	cp.splice(index, 1);
+			mtags.moods = cp;
+	}
+}
+
+for(var i = 0; i < 10; i++){
+	$.getJSON("/next_tag",function(tag){
+		mtags.moods.push(tag.tagname);
+	});
+}
 
 var timestamp = 0;
 var feed1 = new Vue({
@@ -78,68 +160,13 @@ var feed1 = new Vue({
 	data: {
 		events: []
 	},
-	methods:{
-					add_mood:function(tag){
-						var evts = this.events;
-						for(var i = 0; i < evts.length; i++){
-							var evt = evts[i];
-							for(var j = 0; j < evt.tags.length; j++){
-								if(evt.tags[j] === tag){
-									evt.score++;
-								}
-							}
-						}
-						this.events = evts;
-					},
-					remove_mood:function(tag){
-						var evts = this.events;
-						for(var i = 0; i < evts.length; i++){
-							var evt = evts[i];
-							for(var j = 0; j < evt.tags.length; j++){
-								if(evt.tags[j] === tag){
-									evt.score = evt.score-1;
-								}
-							}
-						}
-						this.events = evts;
-					}
-	},
-	computed: {
-    // a computed getter
-    sorted: function () {
-      // `this` points to the vm instance\
-			if(this.events.length){
-				var score = this.events[0].score;
-				var different = false;
-				for(var i = 0; i < this.events.length; i++){
-						if(this.events[i].score != score){
-								different = true;
-								break;
-						}
-				}
-				if(!different){
-						return _.shuffle(this.events);
-				}
-	      return this.events.sort(function(x,y){return x.score < y.score});
-			}
-			return [];
-    }
-  }
+	methods: {
+	 shuffle: function () {
+		 this.events = _.shuffle(this.events)
+	 }
+ }
 });
 
-var current_moods = {};
-
-function toggle_mood(mood){
-	if(current_moods.hasOwnProperty(mood) && current_moods[mood]){
-			feed1.remove_mood(mood);
-			current_moods[mood] = false;
-	}
-	else{
-		current_moods[mood] = true;
-		feed1.add_mood(mood);
-	}
-	console.log(current_moods);
-}
 
 var colorIndex = 0;
 function randomColor(){
@@ -148,31 +175,63 @@ function randomColor(){
 		return colors[colorIndex++ % colors.length];
 }
 
-var j = 0;
-$.getJSON("/getEvents",function(data){
-	data.forEach(function(event){
-		j++;
-		feed1.events.push(
-			{
-					outerstyle:{
-						display:"inline-block",
-						margin:"10px"
-					},
-					styleObject:{
-						width:"350px",
-						height:"360px",
-						backgroundColor:randomColor(),
-						display:"inline-block",
-						overflow:"hidden"
-					},
-					image:event.image,
-					title:event.title,
-					score:0,
-					id:j,
-					venue: event.venue,
-					tags:event.tags,
-					description: event.bio
-			}
-		);
-	});
+for(var j = 0; j < 25; j++){
+	$.getJSON("/next_xp",function(event){
+		feed1.events.push({
+			outerstyle:{
+				display:"inline-block",
+				margin:"10px"
+			},
+			styleObject:{
+				width:"350px",
+				height:"360px",
+				backgroundColor:randomColor(),
+				display:"inline-block",
+				overflow:"hidden"
+			},
+			image:event.Image,
+			title:event.Title,
+			id:j,
+			venue:event.Venue,
+			tag:event.Tags,
+			description:event.Bio
+		});
 });
+}
+
+function next_tag(){
+	mtags.moods = [];
+
+	for(var i = 0; i < 10; i++){
+		$.getJSON("/next_tag",function(tag){
+			mtags.moods.push(tag.tagname);
+		});
+	}
+}
+
+
+function add_five_xps(){
+	for(var i = 0; i <5; i++){
+		$.getJSON("/next_xp",function(event){
+			feed1.events.unshift({
+				outerstyle:{
+					display:"inline-block",
+					margin:"10px"
+				},
+				styleObject:{
+					width:"350px",
+					height:"360px",
+					backgroundColor:randomColor(),
+					display:"inline-block",
+					overflow:"hidden"
+				},
+				image:event.Image,
+				title:event.Title,
+				id:j,
+				venue:event.Venue,
+				tag:event.Tags,
+				description:event.Bio
+			});
+	});
+	}
+}

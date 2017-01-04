@@ -146,12 +146,19 @@ h2{
 
 /** privacy toggle **/
 .privacy-container{
-  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
   width: 200px;
   margin: auto;
   margin-top: 25px;
   margin-bottom: 60px;
 }
+
+.privacy-row{
+  display: flex;
+}
+
 .privacy-label{
   color: #fff;
   font-size: 14px;
@@ -216,13 +223,9 @@ input#toggle:checked + label:after {
   box-shadow: inset 0 0 0 1px rgba(19, 191, 17, 1), 0 2px 4px rgba(0, 0, 0, .2);
 }
 
-.list-item {
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s
 }
-.list-enter-active, .list-leave-active {
-  transition: all 1s;
-}
-.list-enter, .list-leave-active {
-  opacity: 0;
-  transform: translateY(30px);
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }

@@ -31,36 +31,43 @@
 .album__info {
   margin-bottom: 15px;
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+}
 
 .album__info__art img {
   width: 135px;
-  height: 135px; }
+  height: 135px;
+  border-top-left-radius: 20px;
+}
 
 .album__info__meta {
   width: calc( 100% - 150px);
   margin-left: 15px;
   display: flex;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+
+}
 
 .album__info__meta .album__year {
-  color: #aaaaaa;
+  color: #000;
   letter-spacing: 1px; }
 
 .album__info__meta .album__name {
-  color: #fff;
+  color: #000;
   font-size: 25px;
   font-weight: 100; }
 
 .album__info__meta .album__description {
-    color: #bebebe;
+    color: #000;
     font-size: 11px;
     font-weight: 100;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   .album__info__meta .album__creator {
-      color: #fff;
+      color: #000;
       font-size: 13px;
       font-weight: 100;
     }
@@ -73,14 +80,13 @@
 .album__actions {
   margin-top: 5px;
   margin-left: 5px;
+  margin-bottom: 10px;
   color: #656565;
 }
 .album__actions .save {
     padding-left: 30px;
     padding-right: 30px;
     margin-right: 10px; }
-.album__actions .save:hover {
-      border-color: #1ed760; }
 .album__actions .more {
     width: 27px;
     height: 27px;
@@ -294,12 +300,12 @@ button {
     cursor: pointer; }
 
 .button-dark {
-  background: #0dfaf2;
-  color: #656565;
-  border: 1px solid #0dfaf2; }
+  background: #656565;
+  color: #fff;
+  border: 1px solid #fff; }
   .button-dark:hover {
     background: #04dbd2;
-    border: 1px solid #0dfaf2;  }
+    border-color: white;  }
 
 .button-light {
   background: none;

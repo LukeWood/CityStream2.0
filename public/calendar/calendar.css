@@ -301,9 +301,17 @@ body {
 	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
+.custom-header h3 {
+	font-size: 16px;
+}
 .custom-header h2 {
 	color: #fff;
-	width: 60%;
+	margin-bottom: 5px;
+	font-size: 24px;
+}
+
+h3{
+	margin-top: 5px;
 }
 
 .custom-header h2 a,

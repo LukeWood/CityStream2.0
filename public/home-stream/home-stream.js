@@ -44,7 +44,7 @@ Vue.component("square",{
 						 <div class="modal-content">
 							 <div class="modal-header">
 								 <button type="button" class="close" data-dismiss="modal">&times;</button>
-								 <h4 class="modal-title" style="color: #000;"> Business </h4>
+								 <h4 class="modal-title" style="color: #000;"> {{event.title}} </h4>
 							 </div>
 						 <div class="modal-body">
 							  <iframe width="100%" height="300px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
@@ -90,7 +90,7 @@ Vue.component("moodtag",{
 		<div style="cursor:pointer;" v-bind:id="mood" class="moodtag" v-on:click="handleClicks(mood)">
 			<div class="moodtag-icon" >
 					<img v-if="imageExists(computeFPath(mood))" v-bind:src="computeFPath(mood)" width="18px" height="18px"/>
-					<img style="opacity:0;" v-else width="18px" height="18px"/>
+					<img v-else src="img/moodtags/default.png" width="18px" height="18px"/>
 
 			</div>
 			<div class="moodtag-label">
@@ -159,7 +159,12 @@ var feed1 = new Vue({
 	el:"#grid-container",
 	data: {
 		events: []
-	}
+	},
+	methods: {
+	 shuffle: function () {
+		 this.events = _.shuffle(this.events)
+	 }
+ }
 });
 
 

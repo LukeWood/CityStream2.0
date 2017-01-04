@@ -1,6 +1,7 @@
-var codropsEvents = {
+var usersEvents = {
 	'12-25-2016' : '<a href="#">Christmas</a>',
-	'12-31-2016' : '<span>New Year\'s Eve</span>'
+	'12-31-2016' : '<span>New Year\'s Eve</span>',
+	'12-29-2016' : '<span> Dance Class </span>'
 };
 
 
@@ -400,7 +401,7 @@ $(function() {
         }
 
       },
-      caldata : codropsEvents
+      caldata : usersEvents
     } ),
     $month = $( '#custom-month' ).html( cal.getMonthName() ),
     $year = $( '#custom-year' ).html( cal.getYear() );
