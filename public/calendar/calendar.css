@@ -808,8 +808,11 @@ body {
 }
 
 .custom-header h2 {
+	position: relative;
+	top: -15px;
 	color: #fff;
-	width: 60%;
+	width: 120px;
+	margin-bottom: 0px;
 }
 
 .custom-header h2 a,
@@ -882,11 +885,11 @@ body {
 }
 
 .custom-header nav span.custom-prev:before {
-	content: '\25c2';
+	content: '\21FD';
 }
 
 .custom-header nav span.custom-next:before {
-	content: '\25b8';
+	content: '\21FE';
 }
 
 .custom-header nav span:last-child {
@@ -895,7 +898,7 @@ body {
 }
 
 .custom-header nav span.custom-current:before {
-	content: '\27a6';
+	content: '\21BB';
 }
 
 
@@ -1059,6 +1062,10 @@ body {
 		width: auto;
 		text-align: left;
 		padding-right: 100px;
+		margin-top: 0px;
+	}
+	.custom-header h2{
+		margin-top: 10px;
 	}
 
 	.fc-calendar .fc-row,

@@ -1,4 +1,6 @@
-
+body{
+  background-color: #34363f; 
+}
 
 .artist {
   height: 617px;
@@ -612,7 +614,7 @@
       letter-spacing: 1.25px;
       font-size: 14px;
       margin-bottom: 10px;
-      margin-top:0px;  
+      margin-top:0px;
     }
 
 

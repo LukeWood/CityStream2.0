@@ -1,24 +1,16 @@
-#footer{
-  width:100%;
-  margin:0;
-  height:100px;
-  position:fixed;
-  bottom:0;
-  z-index: 1;
-  left:0;
-  max-height: 30px;
-}
+
 .current-track {
   background: #34363f;
   padding: 5px 15px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   text-align: center;
+  margin-top: 10px;
 }
 
 .current-track__options .controls {

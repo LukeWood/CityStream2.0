@@ -5,7 +5,7 @@ var usersEvents = {
 	'01-07-2017' : '<span> Yoga Class </span>',
 	'01-09-2017' : '<span> Yoga Class </span>',
 	'01-10-2017' : '<span> Dance Studio </span>',
-	'01-07-2017' : '<span> Rangers Game </span>', 
+	'01-07-2017' : '<span> Rangers Game </span>',
 };
 
 

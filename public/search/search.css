@@ -1,5 +1,5 @@
 body{
-  background-color: #34363f;
+  background-color: #f8f8f8;
 }
 
 /** search bar **/
@@ -19,7 +19,7 @@ body{
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: #d7d7d7;
-    width:150px;
+    width:300px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -37,7 +37,7 @@ body{
 #search input[type="text"]:focus {
     background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
     color: #6a6f75;
-    width: 200px;
+    width: 320px;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 2ß55, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
