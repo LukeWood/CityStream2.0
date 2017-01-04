@@ -5,7 +5,7 @@
         <input name="q" type="text" size="40" placeholder=" Moodtags..." />
         <div class="moodtags-container">
           <div id="moods">
-            <transition-group name="fade" mode="out-in" tag="div">
+            <transition-group name="component-fade" mode="out-in" tag="div">
               <moodtag v-for="mood in moods" v-bind:key="mood" v-bind:mood="mood" class="list-item"></moodtag>
             </transition-group>
 
@@ -34,7 +34,7 @@
 
       <div id="grid-container">
         <button v-on:click="shuffle">Shuffle</button>
-        <transition-group name="slide-fade" tag="div">
+        <transition-group name="fade" tag="div">
           <square v-for="event in events" v-bind:event="event"  v-bind:key="event.id">
             {{ event }}
           </square>
