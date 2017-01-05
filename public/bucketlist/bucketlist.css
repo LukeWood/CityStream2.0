@@ -1,5 +1,5 @@
 body{
-  background-color: #34363f; 
+  background-color: #34363f;
 }
 
 
@@ -36,36 +36,44 @@ body{
 .album__info {
   margin-bottom: 15px;
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+ }
 
 .album__info__art img {
-  width: 135px;
-  height: 135px; }
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 
 .album__info__meta {
   width: calc( 100% - 150px);
-  margin-left: 15px;
   display: flex;
   flex-flow: column wrap; }
 
 .album__info__meta .album__year {
-  color: #aaaaaa;
-  letter-spacing: 1px; }
+  margin-top: 10px;
+  color: #000;
+  letter-spacing: 1px;
+
+}
 
 .album__info__meta .album__name {
-  color: #fff;
+  color: #000;
   font-size: 25px;
   font-weight: 100; }
 
 .album__info__meta .album__description {
-    color: #bebebe;
+    color: #000;
     font-size: 11px;
     font-weight: 100;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   .album__info__meta .album__creator {
-      color: #fff;
+      color: #000;
       font-size: 13px;
       font-weight: 100;
     }

@@ -54,9 +54,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <span class="user__info__img" >
-        <img src="../img/logo-nav.png" alt="CityStream" class="img-responsive" />
-      </span>
+      <div id="cf2" class="shadow">
+        <img class="bottom" src="../img/usa-citystream-logo.png" width="171px" style="margin-left:10px" />
+        <img class="top" src="../img/citystream-logo.jpg" width="200px" style="margin-left:0px" />
+      </div>
+      <script>
+      $(document).ready(function() {
+          $("#cf2").click(function() {
+          $("#cf2 img.top").toggleClass("transparent");
+        });
+      });
+      </script>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -335,12 +343,15 @@
         <div class="album__info">
           <div class="album__info__art">
             <img src="http://blog.pof.com/wp-content/uploads/2014/11/dinner.jpg" alt="When It's Dark Out" />
+
+<!--
             <div class="album__actions">
               <button class="button-dark save"> Add </button>
               <button class="button-dark more">
                 <i class="ion-ios-more"></i>
               </button>
             </div>
+  -->
           </div>
 
           <div class="album__info__meta">
