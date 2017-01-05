@@ -6,11 +6,16 @@ body{
 
 h1{
   color: #fff;
+  font-size: 40px;
 }
 
 .carousel-container{
   width: 750px;
   margin: auto;
+}
+.carousel {
+  margin-bottom: 50px;
+
 }
 
 /**
@@ -790,7 +795,8 @@ a:hover {
   z-index: 1;
 }
 .tile__details:before {
-  content: '▶';
+  content: ' ';
+  padding-left: 10px;
   left: 0;
   width: 100%;
   font-size: 30px;

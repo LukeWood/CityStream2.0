@@ -6,10 +6,11 @@ h1 {
 .trending-container{
   display: flex;
   flex-wrap: wrap;
-  border-radius: 20px;
+  border-radius: 25px;
   justify-content: left;
   padding: 10px;
-  margin: 0px 20px 20px 20px;
+  margin: 0px;
+  /**
   background: #cebe29;
   background: -moz-linear-gradient(-45deg, #cebe29 0%, #9b1f50 33%, #2989d8 71%, #89b4ff 91%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cebe29), color-stop(33%,#9b1f50), color-stop(71%,#2989d8), color-stop(91%,#89b4ff));
@@ -17,6 +18,7 @@ h1 {
   background: -o-linear-gradient(-45deg, #cebe29 0%,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
   background: -ms-linear-gradient(-45deg, #cebe29 0%,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
   background: linear-gradient(135deg, #0dfaf2, #34363f);
+  **/
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cebe29', endColorstr='#89b4ff',GradientType=1 );
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -27,16 +29,39 @@ h1 {
 .album__likes{
   color: #f8f8f8;
   float: left;
-  margin-left: 10px;
+  margin-left: 60px;
   font-size: 10px;
 }
 
-.album-cover{
+.album-cover-gray{
     opacity: 1;
     display: block;
-    height: 100px;
+    height: 150px;
     background-color: #000;
-    border-radius: 18px;
+    border-radius: 25px;
+    margin: 10px;
+}
+.album-cover-black{
+    display: block;
+    height: 150px;
+    background-color: #000;
+    border-radius: 25px;
+    margin: 10px;
+}
+.album-cover-pure-blue{
+    opacity: 1;
+    display: block;
+    height: 150px;
+    background-color: #02adf9;
+    border-radius: 25px;
+    margin: 10px;
+}
+.album-cover-light-blue{
+    opacity: 1;
+    display: block;
+    height: 150px;
+    background-color: #0dfaf2;
+    border-radius: 25px;
     margin: 10px;
 }
 
@@ -46,22 +71,27 @@ h1 {
   height: 100px;
 }
  .album__picture img{
-   border-top-left-radius:10px;
-   border-bottom-left-radius:10px;
+   border-top-left-radius:25px;
+   border-bottom-left-radius:25px;
+   height: 150px;
+   width: 150px;
+   min-width: 150px;
  }
 
 .album__title {
-  color: #02adf9;
+  color: #fff;
   width: 100%;
+  margin-left: 50px;
   padding-top: 15px;
   font-size: 14px;
+  width: 250px ; word-wrap:break-word;
   text-align: left;
   padding-left: 110px;
 }
 
 .album__author {
-  color: #c6c6c6;
-  margin-left: 0px;
+  color: #fff;
+  margin-left: 50px;
   font-size: 12px;
   text-align: left;
   padding-left: 110px;
@@ -69,9 +99,11 @@ h1 {
 }
 
 .album__description{
-  color: #c6c6c6;
+  color: #fff;
   font-size: 10px;
   text-align: left;
+  margin-left: 50px;
+  margin-right: 5px;
   padding-left: 110px;
 
 }
