@@ -6,23 +6,23 @@
     <meta name="description" content="CityStream is full of things to do in Dallas nearby including bars, restuarants, games, parks, museums, hotels, performances, and more.">
     <meta name="author" content="CityStream Inc.">
     <title> CityStream | Search </title>
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="img/user-review-logo-1.png">
-    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="..img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="..img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="..img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="..img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="..img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="..img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="..img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="..img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="..img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="..img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="..img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="..img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="..img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="..img/user-review-logo-1.png">
+    <link rel="manifest" href="..img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="..img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -347,16 +347,29 @@
                   <a href="#users" aria-controls="users" role="tab" data-toggle="tab">People</a>
                 </li>
                 <li role="presentation">
-                  <a href="#spots" aria-controls="spots" role="tab" data-toggle="tab">Places</a>
+                  <a href="#places" aria-controls="places" role="tab" data-toggle="tab">Places</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="artist__content">
 
+
+
             <div class="tab-content">
               <!-- Overview -->
               <div role="tabpanel" class="tab-pane active" id="tags">
+
+                <div class="overview__albums">
+                  <div class="overview__albums__head">
+                    <span class="section-title">Results</span>
+                    <span class="view-type">
+                      <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab"><i class="fa fa-list list"></i></a>
+                      <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab"> <i class="fa fa-th-large card active"></i> </a>
+                    </span>
+                  </div>
+                </div>
+
                   <div class="moodtags-container">
                       <div class="moodtag">
                         <div class="moodtag-icon">
@@ -715,19 +728,680 @@
 
               <div role="tabpanel" class="tab-pane" id="xps">
 
-                  Users
+
+                <div class="overview__albums">
+                  <div class="overview__albums__head">
+                    <span class="section-title">Results</span>
+                    <span class="view-type">
+                      <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab"><i class="fa fa-list list"></i></a>
+                      <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab"> <i class="fa fa-th-large card active"></i> </a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="artist-overview">
+                    <div class="overview__albums">
+                      <div class="album__tracks">
+                        <div class="tracks">
+                          <div class="tracks__heading">
+                            <div class="tracks__heading__number">#</div>
+                            <div class="tracks__heading__title"> Experience </div>
+                            <div class="tracks__heading__title__extra" style="width: 15%;"> Mood </div>
+                            <div class="tracks__heading__title__extra" style="width: 10%;"> Timing </div>
+                            <div class="tracks__heading__title__extra" style="width: 10%;"> Cost </div>
+                            <div class="tracks__heading__length">
+                              <i class="ion-ios-stopwatch-outline"></i>
+                            </div>
+                            <div class="tracks__heading__popularity">
+                              <i class="ion-thumbsup"></i>
+                            </div>
+                          </div>
+
+                            <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                            <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title" style="color: #000;"> Business </h4>
+                                    </div>
+                                  <div class="modal-body">
+                                     <iframe width="100%" height="300px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDR5_3La87OA7oNMVGXJu_8-s08RTdJm2Y&q=Banditos,Dallas+TX" allowfullscreen></iframe>
+
+                                  <div id="btns-container" style="margin-top:20px;">
+                                  <table style="width:100%">
+                                     <tr>
+                                       <td width="100%" align="center">
+                                       <img src=../img/uber-ride-request-btn.png width="230px">
+                                       </td>
+                                     </tr>
+                                   </table>
+                                   <table style="width:100%">
+                                     <tr>
+                                         <td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="right">
+                                             <a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="tel:1-602-999-0056"> <i class="ion-ios-telephone"></i> Call </a>
+                                         </td>
+                                         <td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="center">
+                                             <a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="www.banditostexmex.com"> <i class="ion-log-out"> Website </a>
+                                         </td>
+                                         <td width="33.33%" align="left">
+                                             <a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="website" ><i class="ion-pricetags"> Offer </a>
+                                         </td>
+                                     </tr>
+                                   </table>
+                                  </div>
+                              </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">1</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Experience Title</span>
+                              <span class="feature">Venue</span>
+                            </div>
+                            <div class="track__explicit">
+                              <div class="label">Top Moodtag</div>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$$
+                              </span>
+                            </div>
+                            <div class="track__length">0:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">3</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Live Jazz on the Patio</span>
+                              <span class="feature">ZZ Jaz Bar</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Jazz</span>
+                              <span class="label">Live Music</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$
+                              </span>
+                            </div>
+                            <div class="track__length">1:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">4</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Signature Bar with a View</span>
+                              <span class="feature">Soda Bar</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">View</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$
+                              </span>
+                            </div>
+                            <div class="track__length">1:30</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">5</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Art Class</span>
+                              <span class="feature">Galleria Art Shop</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Art</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$
+                              </span>
+                            </div>
+                            <div class="track__length">0:45</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">6</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Dallas Bridge Landmark</span>
+                              <span class="feature">Arts District</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Landmarks</span>
+                              <span class="label">Free</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                <div class="free"> free </div>
+                              </span>
+                            </div>
+                            <div class="track__length">0:25</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">7</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Local Wine Tasting</span>
+                              <span class="feature">Vino 212</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Wine</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$
+                              </span>
+                            </div>
+                            <div class="track__length">2:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">8</div>
+                            <div class="track__added">
+                              <i class="ion-checkmark-round added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Couples Spa</span>
+                              <span class="feature">Hardwood Spa and Resort</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Relax</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$
+                              </span>
+                            </div>
+                            <div class="track__length">1:30</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">9</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Shopping Stroll</span>
+                              <span class="feature">Arts District</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Shopping</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $
+                              </span>
+                            </div>
+                            <div class="track__length">1:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">11</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Night on the Town</span>
+                              <span class="feature">Five Sixty</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">View</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$$
+                              </span>
+                            </div>
+                            <div class="track__length">2:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">13</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title"> Yoga in the Park</span>
+                              <span class="feature">Klyde Warren Park</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Outside</span>
+                              <span class="label">Active</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                <div class="free">
+                                  free
+                                </div>
+                              </span>
+                            </div>
+                            <div class="track__length">0:45</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">14</div>
+                            <div class="track__added">
+                              <i class="ion-checkmark-round added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Indoor Skydiving</span>
+                              <span class="feature">Extreme Sports Inc.</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Extreme</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$
+                              </span>
+                            </div>
+                            <div class="track__length">0:30</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">15</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Dallas Skyline Drinks</span>
+                              <span class="feature">Soda Bar</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">View</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$$
+                              </span>
+                            </div>
+                            <div class="track__length">1:20</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">16</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title"> Indie Film Fest </span>
+                              <span class="feature">Alamo Drafthouse</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Arts</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$
+                              </span>
+                            </div>
+                            <div class="track__length">3:00</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">17</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Bike ride across downtown</span>
+                              <span class="feature">Katy Trail</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Outside</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/full-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                <span class="free">
+                                free
+                                </span>
+                              </span>
+                            </div>
+                            <div class="track__length">0:55</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                          <div class="track" data-toggle="modal" data-target="#myModal">
+                            <div class="track__number">18</div>
+                            <div class="track__added">
+                              <i class="ion-plus not-added"></i>
+                            </div>
+                            <div class="track__title featured">
+                              <span class="title">Dallas Mavericks Game</span>
+                              <span class="feature">AT&T Stadium</span>
+                            </div>
+                            <div class="track__explicit">
+                              <span class="label">Sports</span>
+                            </div>
+                            <div class="track__time">
+                              <span class="time">
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=..img/icons/empty-circle.png width="10px" height="10px"/>
+                                <img src=img/icons/full-circle.png width="10px" height="10px"/>
+                              </span>
+                            </div>
+                            <div class="track__cost">
+                              <span class="cost">
+                                $$$
+                              </span>
+                            </div>
+                            <div class="track__length">2:30</div>
+                            <div class="track__popularity">
+                              <i class="ion-arrow-graph-up-right"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div role="tabpanel" class="tab-pane" id="related-artists">
+
+                    <div id="grid-container">
+                      <transition-group name="flip-list" tag="div">
+                      <square v-for="event in sorted" v-bind:event="event"  v-bind:key="event.id" ></square>
+                      </transition>
+                    </div>
+
+                  </div>
+
+                </div>
+
 
               </div>
 
               <div role="tabpanel" class="tab-pane" id="users">
 
-                  Spots
+                <div class="overview__albums">
+                  <div class="overview__albums__head">
+                    <span class="section-title">Results</span>
+                    <span class="view-type">
+                      <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab"><i class="fa fa-list list"></i></a>
+                      <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab"> <i class="fa fa-th-large card active"></i> </a>
+                    </span>
+                  </div>
+                </div>
 
+                <div class="media-cards">
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14980838_10210205631471639_2169648769413982078_n.jpg?oh=b3f13b8bf742225e8a4c9e47f3981ba2&oe=58DCFEB7);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">Marge Brennen</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15232051_1392486930781648_8258639405192031594_n.jpg?oh=54c91c985cf79408714b93fcee6bde4d&oe=591AD74E);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">Sammi Dow</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/13321945_10155000073979466_2959641290335137219_n.jpg?oh=5c9a95f5486f97c0ecf3ef79da38664f&oe=591FF2D0);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">Landon Gagnier</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14680647_10205679375902715_999988991236701505_n.jpg?oh=378619066c07a258a986ca517431c4ca&oe=58E41A87);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">Mark Esslander</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-0/s480x480/15895314_10211663783654637_1477595217415071110_n.jpg?oh=48c158b82c5af3b58bf3a371b22e5a6c&oe=591F1B03);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Maddie Stecker </a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15698290_1546655282015703_8925160446224892683_n.jpg?oh=21214cff5b9fd232a37e8ac63585d7fd&oe=58D5FE94);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Maddie Cuttur</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/10350617_10152508565658104_769009906574315657_n.jpg?oh=8b4fe4e3735c8b7e05f783454bf4c8f1&oe=58E310EE);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Cameron Kenny </a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/13165954_10208495377055068_6881054661479585638_n.jpg?oh=b2203a87ffd05579b3a2d0ef690340d4&oe=58DA644E);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Riggs Lennen</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14947732_10209714159085198_2547783157662400452_n.jpg?oh=f22f4b2df5813874ec059299e5c152f2&oe=59219A2F);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Katelyn Iorillo</a>
+                  </div>
+
+                </div>
               </div>
 
-              <div role="tabpanel" class="tab-pane" id="spots">
+              <div role="tabpanel" class="tab-pane" id="places">
 
-                  Albums, Bucketlists, Charts
+                <div class="overview__albums">
+                  <div class="overview__albums__head">
+                    <span class="section-title">Results</span>
+                    <span class="view-type">
+                      <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab"><i class="fa fa-list list"></i></a>
+                      <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab"> <i class="fa fa-th-large card active"></i> </a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="media-cards">
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-0/p480x480/15622157_1304622279580240_717268528259672283_n.jpg?oh=465f9bce300b70ad1585242a5988595a&oe=591E4070);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">La Grande Orange</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(http://blog.prohousing.com/wp-content/uploads/2013/10/Mastros.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">Domminick's Steakhouse</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(http://4769-presscdn-0-95.pagely.netdna-cdn.com/wp-content/uploads/2013/05/pl_OHSO_NightBackPatio1.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">OHSO Brewery</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/0f0571a8e901a678988f4ced0719527f4c97c00e.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer">The Compass Grill</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/152ca1dbc6fcd47c366789b6fc1bdda01dae7010.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Elements </a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/7687e1a3655cdd6174ca585aeef91e31c9628599.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Dominick's Steakhouse</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/10407ec9295ca6ab7331d65b7cfda12a3823b77d.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> J&G Steakhouse </a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/504dee7c51b925339f797cc7b2aa87054588b1ce.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Talavera</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://kunversion-frontend-blog.s3.amazonaws.com/images/3a8ecc54da427d1897c353cf01e18144cc706007.jpg);">
+                      <i class="ion-log-in"></i>
+                    </div>
+                    <a class="media-card__footer"> Pinon Grill</a>
+                  </div>
+
+                </div>
 
               </div>
 
