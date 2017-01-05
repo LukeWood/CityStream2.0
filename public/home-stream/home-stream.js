@@ -64,21 +64,22 @@ Vue.component("square",{
 						 <div id="btns-container" style="margin-top:20px;">
 						 <table style="width:100%">
 						 		<tr>
-									<td width="100%" align="center">
+									<td width="100%" align="center" style="display: block;" >
 									<img src=../img/uber-ride-request-btn.png width="230px">
+									<img src=../img/ticketmaster-btn.jpeg width="180px" height="43px">
 									</td>
 								</tr>
 							</table>
 							<table style="width:100%">
 								<tr>
-										<td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="right">
-												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="tel:1-602-999-0056"> <i class="ion-ios-telephone"></i> Call </a>
+										<td width="33.33%" style="border-right: 0px solid #656565;" align="right">
+												<a class="btn btn-primary " style="margin:5px; background-color:#000; color: #fff; border-radius: 15%; " href="tel:1-602-999-0056"> <i class="ion-ios-telephone"></i> Call </a>
 										</td>
-										<td width="33.33%" style="border-right: 0px solid #b2b2b2;" align="center">
-												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="www.banditostexmex.com"> <i class="ion-log-out"> Website </a>
+										<td width="33.33%" style="border-right: 0px solid #656565;" align="center">
+												<a class="btn btn-primary " style="margin:5px; background-color:#000; color: #fff; border-radius: 15%;" href="www.banditostexmex.com"> <i class="ion-log-out"> Website </a>
 										</td>
 										<td width="33.33%" align="left">
-												<a class="btn btn-primary btn-sm" style="margin:5px; background-color:#0dfaf2; color: #656565; border-color: #fff" href="website" ><i class="ion-pricetags"> Offer </a>
+												<a class="btn btn-primary" style="margin:5px; background-color:#000; color: #fff; border-radius: 15%;" href="website" ><i class="ion-pricetags"> Offer </a>
 										</td>
 							  </tr>
 							</table>
