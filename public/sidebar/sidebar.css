@@ -34,7 +34,6 @@
 .navigation__list__header:after {
   font-family: "Ionicons";
   content: "\f123";
-  font-size: 9px; 
 }
 
 .navigation__list .active:after {
