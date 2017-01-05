@@ -20,9 +20,9 @@ body a:hover {
   width: 15%; }
 
 .content__middle {
-  margin: auto;
   width: 50%;
   text-align: center;
+  margin: auto; 
 }
 
 .content__right {
