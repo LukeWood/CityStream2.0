@@ -19,13 +19,13 @@ Vue.component("square",{
 			<div  v-bind:style=event.styleObject v-bind:class=event.classObject style='border-radius:8%;'>
 			<div style='position: relative'>
 				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto' data-toggle="modal" data-target="#myModal"></img>
-				<div style='position:absolute; bottom:5px; right:10px; color: #fff; '>
+				<div style='position:absolute; bottom:5px; right:10px; color: #fff; cursor: pointer;  opacity: 0.9; font-size: 16px;'>
 					 <i class="ion-plus-circled"></i>
 				</div>
-				<div style='position:absolute; bottom:5px; left:10px; color: #fff; '>
+				<div style='position:absolute; bottom:5px; left:10px; color: #fff; cursor: pointer;  opacity: 0.9; font-size: 12px; '>
 					 <i class="ion-thumbsup"></i> 304 likes
 				</div>
-				<div style='position:absolute; top:10px; right:15px; color: #fff; opacity: 0.7; '>
+				<div style='position:absolute; top:10px; right:15px; color: #fff; opacity: 0.75; '>
 					XP
 				</div>
 			</div>
