@@ -16,3 +16,10 @@ new Vue({
     items:["home","not home","fuck yeah components are working"]
   }
 });
+
+
+$(document).ready(function() {
+    $("#cf2").click(function() {
+    $("#cf2 img.top").toggleClass("transparent");
+  });
+});
