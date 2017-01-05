@@ -16,11 +16,14 @@ Vue.component("square",{
 	template:
 	`
  		<div v-bind:id=event.id v-bind:style=event.outerstyle>
-			<div  v-bind:style=event.styleObject v-bind:class=event.classObject style='border-radius:10%;'>
+			<div  v-bind:style=event.styleObject v-bind:class=event.classObject style='border-radius:8%;'>
 			<div style='position: relative'>
 				<img v-bind:src=event.image style='width:100%; height:70%; margin-bottom:3px; display: block; margin-left: auto; margin-right: auto' data-toggle="modal" data-target="#myModal"></img>
+				<div style='position:absolute; bottom:5px; right:10px; color: #fff; '>
+					 <i class="ion-plus-circled"></i>
+				</div>
 				<div style='position:absolute; bottom:5px; left:10px; color: #fff; '>
-					<i class="ion-thumbsup"></i> 304 likes
+					 <i class="ion-thumbsup"></i> 304 likes
 				</div>
 				<div style='position:absolute; top:10px; right:15px; color: #fff; opacity: 0.7; '>
 					XP
