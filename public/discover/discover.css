@@ -476,12 +476,13 @@ a:hover {
   z-index: 2;
 }
 .tile:hover .tile__details {
-  /**opacity: 1;**/
+  opacity: 1;
 }
 .tile__title {
   position: absolute;
   bottom: 0;
   padding: 10px;
+  color: #fff; 
 }
 .row__inner:hover {
   -webkit-transform: translate3d(-125px, 0, 0);
