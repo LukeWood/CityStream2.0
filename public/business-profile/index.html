@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="CityStream is full of things to do in Dallas nearby including bars, restuarants, games, parks, museums, hotels, performances, and more.">
     <meta name="author" content="CityStream Inc.">
-    <title> CityStream | My Profile </title>
+    <title> CityStream | Business Profile </title>
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
@@ -40,9 +40,10 @@
     <link href="../index.css" rel="stylesheet">
     <link href="../sidebar/sidebar.css" rel="stylesheet">
     <link href="../footer/footer.css" rel="stylesheet">
-    <link href="user-profile.css" rel="stylesheet">
+    <link href="business-profile.css" rel="stylesheet">
 
   <body>
+<!-- BODY BODY BODY -------------------------------------------------------->
 
 <!-- NAV NAV NAV ----------------------------------------------------------->
 <nav class="navbar">
@@ -67,13 +68,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">
+        <li><a href="../user-profile">
           <span class="prof__img">
             <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/10917375_10205574427507728_202757125507929591_n.jpg?oh=a5f3add402b3e832edf7abb773b229cb&oe=5898E834" alt="Profile Picture" class="img-responsive" />
         </span> My Profile </a>
         </li>
-        <li><a href="../calendar"><span class="glyphicon glyphicon-calendar"></span> Cal </a></li>
-        <li><a href="../"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <li><a href="calendar/"><span class="glyphicon glyphicon-calendar"></span> Cal </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
@@ -92,27 +93,27 @@
             Main
           </div>
           <div class="collapse" id="main">
-            <a href="../" class="navigation__list__item">
+            <a href="index.html" class="navigation__list__item">
               <i class="ion-ios-browsers"></i>
               <span>Home</span>
             </a>
-            <a href="../" class="navigation__list__item">
+            <a href="templates/Discover.html" class="navigation__list__item">
               <i class="ion-person-stalker"></i>
               <span>Discover</span>
             </a>
-            <a href="../trending" class="navigation__list__item">
+            <a href="templates/Trending.html" class="navigation__list__item">
               <i class="ion-radio-waves"></i>
               <span>Trending</span>
             </a>
-            <a href="../search" class="navigation__list__item">
-              <i class="ion-search"></i>
-              <span>Search</span>
-            </a>
-            <a href="#" class="navigation__list__item">
+            <a href="templates/Social-Circles.html" class="navigation__list__item">
               <i class="ion-ios-people"></i>
               <span>Social Circles</span>
             </a>
-            <a href="#" class="navigation__list__item">
+            <a href="templates/Search.html" class="navigation__list__item">
+              <i class="ion-search"></i>
+              <span>Search</span>
+            </a>
+            <a href="templates/Local-Circles.html" class="navigation__list__item">
               <i class="ion-ios-navigate"></i>
               <span>Local Circles</span>
             </a>
@@ -188,11 +189,7 @@
             </a>
             <a href="#" class="navigation__list__item">
               <i class="ion-android-favorite-outline"></i>
-              <span>Bucketlists</span>
-            </a>
-            <a href="#" class="navigation__list__item">
-              <i class="ion-android-favorite-outline"></i>
-              <span>Albums</span>
+              <span>Covers</span>
             </a>
           </div>
 
@@ -330,17 +327,18 @@
     <div class="content__middle">
 
 
+
         <div class="artist is-verified">
           <div class="artist__header">
             <div class="artist__info">
               <div class="profile__img">
-                <img src="https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15109631_10210434156237909_3206743276329506488_n.jpg?oh=cf78df6e32ba07107d5d5682192c4cc1&oe=58E26640" alt="profile pic" />
+                <img src="https://image.freepik.com/free-vector/restaurant-logo-template_23-2147510426.jpg" alt="profile pic" />
               </div>
               <div class="artist__info__meta">
-                <div class="artist__info__type">User</div>
-                <div class="artist__info__name">John Mullin</div>
+                <div class="artist__info__type">Restaurant</div>
+                <div class="artist__info__name">Saint Ann's</div>
                 <div class="artist__info__followers">
-                  <div class="artist__listeners__count">1,622 Followers</div>
+                  <div class="artist__listeners__count">15,662 Followers</div>
                 </div>
                 <div class="artist__info__actions">
                   <button class="button-dark">
@@ -362,11 +360,11 @@
                 <li role="presentation" class="active">
                   <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
                 </li>
-                <li role="presentation">
-                  <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Followers</a>
+                <li role="presentation" class="active">
+                  <a href="#calendar" aria-controls="calendar" role="tab" data-toggle="tab">Calendar</a>
                 </li>
                 <li role="presentation">
-                  <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Following</a>
+                  <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Related Spots</a>
                 </li>
               </ul>
               <div class="artist__navigation__friends">
@@ -389,38 +387,73 @@
                 <div class="overview">
 
                   <div class="overview__related">
-                    <div class="section-title">About</div>
+                    <div class="section-title">Spot Info</div>
                     <div class="related-artists">
                       <a href="#" class="related-artist">
                         <span class="related-artist__img">
+                          <i class="ion-ios-telephone"></i>
+                          602-999-0056
+                        </span>
+
+                      </a>
+                      <a href="#" class="related-artist">
+                        <span class="related-artist__img">
                           <i class="ion-log-out"></i>
-                          www.johnamullin.com
+                          www.thehappiesthour.com
                         </span>
                       </a>
                       <a href="#" class="related-artist">
                         <span class="related-artist__img">
                           <i class="ion-location"></i>
-                          Upper Greenville
+                          8956 E 87th Street Dallas, TX
                         </span>
                       </a>
-                      <a class="related-artist">
-                          <i class="ion-map"></i>
-                          I love finding new places that I've never been to with my friends, girlfriend, and family. Check out my recent XPs.
+                      <a href="#" class="related-artist">
+                        <span class="related-artist__img">
+                          <i class="ion-ios-clock"></i>
+                          Mon: 9:00am - 10:00pm </br>
+                          Tues: 9:00am - 10:00pm </br>
+                          Wed: 9:00am - 10:00pm </br>
+                          Thur: 9:00am - 10:00pm </br>
+                          Fri: 9:00am - 10:00pm </br>
+                          Sat: 9:00am - 10:00pm </br>
+                          Sun: 9:00am - 10:00pm </br>
+                        </span>
+
                       </a>
-                      <div href="#" class="top-moodtags">
-                          <div class="label">Sports</div>
-                          <div class="label">Steakhouses</div>
-                          <div class="label">Auto</div>
-                          <div class="label">Mexican</div>
-                      </div>
+                      <a href="#" class="related-artist">
+                        <span class="related-artist__img">
+                          <i class="ion-map"></i>
+                          Saint Ann's is a killer spot for Dallas locals and Dallas visitors sitting 1500 feet ontop of the Downtown urban landscape.
+                        </span>
+                      </a>
                     </div>
                   </div>
 
 
                   <div class="overview__artist">
+                    <!-- Latest Release-->
+                    <div class="section-title">Top Experience</div>
+                    <div class="latest-release">
+                      <div class="latest-release__art">
+                        <img src=" https://s3-media1.fl.yelpcdn.com/bphoto/Eme6TREG5d_vMoRBf1sgVQ/o.jpg " alt="When It's Dark Out" />
+                      </div>
+                      <div class="latest-release__song">
+                        <div class="latest-release__song__title">Outside Patio with Live Music </div>
+                        <div class="latest-release__song__date">
+                          <div class="track__added">
+                            <i class="ion-android-favorite-outline"></i> 2,349
+                          </div>
+                          <span class="day">4</span>
+                          <span class="month">December</span>
+                          <span class="year">2015</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- / -->
 
                     <!-- Popular-->
-                    <div class="section-title">Top 5 Favorites</div>
+                    <div class="section-title">Top 5</div>
                     <div class="tracks">
                       <div class="track">
                         <div class="track__art">
@@ -846,65 +879,54 @@
                 <div class="related-header">
                     <h1> Spots </h1>
                 </div>
-
-
                 <div class="media-cards">
-                  <div class="media-cards">
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14980838_10210205631471639_2169648769413982078_n.jpg?oh=b3f13b8bf742225e8a4c9e47f3981ba2&oe=58DCFEB7);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer">Marge Brennen</a>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/562f8105e4b0741d5a36b04d/578953e415d5db54d3a22c90/1468617701751/HAPPIEST+HOUR.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15232051_1392486930781648_8258639405192031594_n.jpg?oh=54c91c985cf79408714b93fcee6bde4d&oe=591AD74E);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer">Sammi Dow</a>
+                    <a class="media-card__footer">Happiest Hour</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/55f9c9dbe4b09116fae8d877/55f9c9f6e4b09104215c04ea/1442433528318/Mercat+Bistro+photo+by+Daniel+Driensky.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/13321945_10155000073979466_2959641290335137219_n.jpg?oh=5c9a95f5486f97c0ecf3ef79da38664f&oe=591FF2D0);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer">Landon Gagnier</a>
+                    <a class="media-card__footer">Mercat Bistro</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/55f9c879e4b08df9a0a128e2/55f9c923e4b071dc21795383/1442433315538/Marie+Gabrielle+Gardens.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14680647_10205679375902715_999988991236701505_n.jpg?oh=378619066c07a258a986ca517431c4ca&oe=58E41A87);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer">Mark Esslander</a>
+                    <a class="media-card__footer">Marie Gabrielle</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/55f9e2ade4b00c1c797c478f/578953ffcd0f68bdd199c368/1468617728731/MAGNOLIAS+DALLAS.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-0/s480x480/15895314_10211663783654637_1477595217415071110_n.jpg?oh=48c158b82c5af3b58bf3a371b22e5a6c&oe=591F1B03);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer"> Maddie Stecker </a>
+                    <a class="media-card__footer">Magnolias: Sous Le Pont</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/55f9e392e4b00b2feb738935/57895410725e25c4aa737a10/1468617745743/THE+GROVE.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15698290_1546655282015703_8925160446224892683_n.jpg?oh=21214cff5b9fd232a37e8ac63585d7fd&oe=58D5FE94);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer"> Maddie Cuttur</a>
+                    <a class="media-card__footer"> The Grove </a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54d3b5a7e4b032aabf9c4561/5808f7ed29687f9f232125f5/5808f7ed46c3c44d6e2e2958/1476982777193/092816+-+Festeggiamo+at+Dolce+Riviera+%281%29.jpg?format=500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/10350617_10152508565658104_769009906574315657_n.jpg?oh=8b4fe4e3735c8b7e05f783454bf4c8f1&oe=58E310EE);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer"> Cameron Kenny </a>
+                    <a class="media-card__footer">Dolce Riviera</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://cdn0.vox-cdn.com/thumbor/wO_LO31qEhNKG6xiGAOgnaUu8Dc=/0x85:1200x760/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/38605424/parliamentKD6.0.0.jpg);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/13165954_10208495377055068_6881054661479585638_n.jpg?oh=b2203a87ffd05579b3a2d0ef690340d4&oe=58DA644E);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer"> Riggs Lennen</a>
+                    <a class="media-card__footer">Parliament</a>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-card__image" style="background-image: url(https://static1.squarespace.com/static/54ff290ce4b0a76e3a90e5d4/55639b42e4b093ada88786f7/55639bd7e4b02c9d26fa56c4/1432591429268/B5Gc0-aIcAEKZKR.jpg-large.jpeg?format=1500w);">
+                      <i class="ion-log-in"></i>
                     </div>
-                    <div class="media-card">
-                      <div class="media-card__image" style="background-image: url(https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/14947732_10209714159085198_2547783157662400452_n.jpg?oh=f22f4b2df5813874ec059299e5c152f2&oe=59219A2F);">
-                        <i class="ion-log-in"></i>
-                      </div>
-                      <a class="media-card__footer"> Katelyn Iorillo</a>
-                    </div>
-
+                    <a class="media-card__footer">Public House</a>
                   </div>
                 </div>
               </div>
@@ -917,7 +939,6 @@
             </div>
           </div>
         </div>
-
 
 
 

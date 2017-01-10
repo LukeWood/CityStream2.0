@@ -32,7 +32,7 @@ Vue.component("square",{
 
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
-						<a style='font-size: 12px; color: #fff; ' href='/business-profile/business-profile.html'> {{event.venue}}		</a>
+						<a style='font-size: 12px; color: #fff; ' href='/business-profile/'> {{event.venue}}		</a>
 						<div style=' font-size: 10px; font-size: 10px; max-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;'>   {{event.description}}		</div>
 			 </center>
 			 <center style= 'display: block; margin-top:6px;'>

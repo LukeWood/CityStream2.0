@@ -1,5 +1,5 @@
 body{
-  background-color: #34363f; 
+  background-color: #f8f8f8;
 }
 
 .artist {
@@ -366,7 +366,6 @@ body{
 }
 
 .related-artists .related-artist {
-  background: #34363f;
   padding: 5px;
   margin-bottom: 2px; }
 
