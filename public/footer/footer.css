@@ -11,6 +11,7 @@
   left: 0;
   text-align: center;
   margin-top: 10px;
+  z-index: 1000;
 }
 
 .current-track__options .controls {
