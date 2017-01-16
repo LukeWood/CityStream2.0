@@ -1,0 +1,155 @@
+.artist {
+  height: 617px;
+  overflow-y: scroll; }
+  .artist__header {
+    height: 55px;
+    border-bottom: 1px solid #698b9b;
+    position: relative;
+    background-image: linear-gradient( rgba(60, 166, 244, 0.6), rgba(60, 166, 244, 0.1) ), url(https://static1.squarespace.com/static/52d45140e4b0ae205c434b6f/t/57d9c5c1f7e0abbf1b91308b/1473889766423/Saint+Ann+Restaurant+%26+Bar+Patio.jpg?format=1500w);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .artist__header:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.15;
+    background-image: url( );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; }
+  .artist__header .artist__info {
+    padding: 15px;
+    z-index: 1;
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+    flex-flow: row wrap;
+    align-items: flex-end;
+
+  }
+  .artist__header .artist__info .profile__img {
+    margin-right: 15px; }
+    .artist__header .artist__info .profile__img img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20%; }
+  .artist__header .artist__info__type {
+    color: #aaaaaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px; }
+  .artist__header .artist__info__name {
+    color: white;
+    font-size: 36px;
+    font-weight: 100; }\
+    .artist__header .artist__info__followers {
+      display: inline-flex;
+      float: right;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+  .artist__header .artist__info__actions {
+    display: inline-flex;
+    margin-top: 10px;
+    width: 212px;
+    margin: auto;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+    .artist__header .artist__info__actions button {
+      margin-right: 10px;
+      height: 27px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      padding: 0 15px;
+      font-weight: 500; }
+      .artist__header .artist__info__actions button i {
+        font-size: 20px;
+        margin-right: 5px; }
+    .artist__header .artist__info__actions .more {
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      padding: 0;
+      text-align: center; }
+      .artist__header .artist__info__actions .more i {
+        margin: 0;
+        padding-left: 6px; }
+  .artist__header .artist__listeners {
+    width: 20%;
+    z-index: 1;
+    text-align: right;
+    color: #fff;
+    font-weight: 100;
+    font-size: 16px;
+    letter-spacing: 1px; }
+    .artist__header .artist__listeners__label {
+      color: #fff;
+      font-weight: 300;
+      margin-left: 6px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .artist__header .artist__listeners__count {
+      color:#fff;
+    }
+  .artist__header .artist__navigation {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    background: rgba(24, 24, 24, 0.6);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .artist__header .artist__navigation ul {
+    border: none; }
+    .artist__header .artist__navigation ul li {
+      padding: 0 15px; }
+      .artist__header .artist__navigation ul li a {
+        padding: 15px 0;
+        color: #aaaaaa;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.4s ease;
+        border-bottom: 4px solid transparent; }
+        .artist__header .artist__navigation ul li a:hover {
+          background: none;
+          border: none;
+          color: white;
+          transition: all 0.4s ease;
+          border-bottom: 4px solid transparent; }
+      .artist__header .artist__navigation ul li.active a {
+        color: white;
+        background: none;
+        border: none;
+        border-bottom: 4px solid #0dfaf2; }
+        .artist__header .artist__navigation ul li.active a:hover {
+          border-bottom: 4px solid #0dfaf2; }
+  .artist__header .artist__navigation__friends {
+    padding: 15px; }
+  .artist__header .artist__navigation__friends img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative; }
+  .artist__header .artist__navigation__friends .tooltip {
+    z-index: 1;
+    position: absolute; }
+  .artist.is-verified .profile__img {
+    position: relative; }

@@ -24,6 +24,7 @@ body a:hover {
   text-align: center;
   margin: auto;
   margin-bottom: 50px;
+  margin-top: 0px;
 }
 
 .content__right {

@@ -1,0 +1,391 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CityStream is full of things to do in Dallas nearby including bars, restuarants, games, parks, museums, hotels, performances, and more.">
+    <meta name="author" content="CityStream Inc.">
+    <title> CityStream | Analytics Dashboard </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="img/user-review-logo-1.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.3.0/nouislider.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <script src="js/slideout/dist/slideout.min.js"></script>
+
+    <!-- component css -->
+    <link href="../navbar/navbar.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
+    <link href="../sidebar/sidebar.css" rel="stylesheet">
+    <link href="../footer/footer.css" rel="stylesheet">
+    <link href="analytics.css" rel="stylesheet">
+
+  <body>
+<!-- BODY BODY BODY -------------------------------------------------------->
+
+<!-- NAV NAV NAV ----------------------------------------------------------->
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="cf2" class="shadow">
+        <img class="bottom" src="../img/usa-citystream-logo.png" width="171px" style="margin-left:10px" />
+        <img class="top" src="../img/citystream-logo.jpg" width="200px" style="margin-left:0px" />
+      </div>
+      <script>
+      $(document).ready(function() {
+          $("#cf2").click(function() {
+          $("#cf2 img.top").toggleClass("transparent");
+        });
+      });
+      </script>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../user-profile">
+          <span class="prof__img">
+            <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/10917375_10205574427507728_202757125507929591_n.jpg?oh=a5f3add402b3e832edf7abb773b229cb&oe=5898E834" alt="Profile Picture" class="img-responsive" />
+        </span> My Profile </a>
+        </li>
+        <li><a href="calendar/"><span class="glyphicon glyphicon-calendar"></span> Cal </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- SIDE SIDE SIDE ----------------------------------------------------------->
+<section class="content">
+    <div class="content__left">
+<section class="navigation">
+        <div class="navigation__list">
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#main"
+               aria-expanded="true"
+               aria-controls="main">
+            Main
+          </div>
+          <div class="collapse" id="main">
+            <a href="/" class="navigation__list__item">
+              <i class="ion-ios-browsers"></i>
+              <span>Home</span>
+            </a>
+            <a href="/discover" class="navigation__list__item">
+              <i class="ion-person-stalker"></i>
+              <span>Discover</span>
+            </a>
+            <a href="/trending" class="navigation__list__item">
+              <i class="ion-radio-waves"></i>
+              <span>Trending</span>
+            </a>
+            <a href="/social-circles" class="navigation__list__item">
+              <i class="ion-ios-people"></i>
+              <span>Social Circles</span>
+            </a>
+            <a href="/search" class="navigation__list__item">
+              <i class="ion-search"></i>
+              <span>Search</span>
+            </a>
+            <a href="templates/Local-Circles.html" class="navigation__list__item">
+              <i class="ion-ios-navigate"></i>
+              <span>Local Circles</span>
+            </a>
+          </div>
+        </div>
+        <div class="navigation__list">
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#streams"
+               aria-expanded="true"
+               aria-controls="streams">
+            Streams
+          </div>
+          <div class="collapse" id="streams">
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Main</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Late Night Eats</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Dallas Culture</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Historical Places</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Dallas Landmarks</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Art and Wine</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Nightclubs and Bars</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Study and Relax</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>DateNights</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-social-rss"></i>
+              <span>Walk Maggie and Gretta</span>
+            </a>
+          </div>
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#favorites"
+               aria-expanded="false"
+               aria-controls="favorites">
+            Favorites
+          </div>
+          <div class="collapse" id="favorites">
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-favorite-outline"></i>
+              <span>Experiences</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-favorite-outline"></i>
+              <span>Spots</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-favorite-outline"></i>
+              <span>Covers</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="navigation__list">
+
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#bucketlists"
+               aria-expanded="false"
+               aria-controls="bucketlists">
+            BucketLists
+          </div>
+          <div class="collapse" id="bucketlists">
+            <a href="/bucketlist" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span>Best Unknown DateSpots</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span>op 10 things to do before dying</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span>Twelve places to meet a girl</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span> Famous Dallas Bar Crawl</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span>The Theatre Afficiando Guidebook </span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-android-list"></i>
+              <span>Dallas Ultimate Sports Fan List</span>
+            </a>
+          </div>
+
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#charts"
+               aria-expanded="false"
+               aria-controls="charts">
+            Charts
+          </div>
+
+          <div class="collapse" id="charts">
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ribbon-b"></i>
+              <span>Top 20 Mexican</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ribbon-b"></i>
+              <span>Top 20 Italian</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ribbon-b"></i>
+              <span>Top 10 Design District</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ribbon-b"></i>
+              <span>Top 50 Bars</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ribbon-b"></i>
+              <span>Top 10 Open Late</span>
+            </a>
+          </div>
+
+          <div class="navigation__list__header"
+               role="button"
+               data-toggle="collapse"
+               href="#albums"
+               aria-expanded="false"
+               aria-controls="albums">
+            Albums
+          </div>
+          <div class="collapse" id="albums">
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Late Night Eats</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Dallas Culture</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Historical Places</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Dallas Landmarks</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Art and Wine</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Nightclubs and Bars</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Study and Relax</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>DateNights</span>
+            </a>
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-albums-outline"></i>
+              <span>Walk Maggie and Gretta</span>
+            </a>
+          </div>
+        </div>
+     </section>
+
+      <div class="playlist">
+        <a href="#">
+          <i class="ion-ios-plus-outline"></i>
+          New BucketList
+        </a>
+      </div>
+    </div>
+<!-- TRENDING TRENDING TRENDING ----------------------------------------------------------->
+    <div class="content__middle">
+
+      <div class="artist__header">
+        <div class="artist__navigation">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab">Dashboard</a>
+            </li>
+            <li role="presentation">
+              <a href="#posts" aria-controls="posts" role="tab" data-toggle="tab">Posts</a>
+            </li>
+            <li role="presentation">
+              <a href="#campaigns" aria-controls="campaigns" role="tab" data-toggle="tab">Campaigns</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="artist__content">
+
+        <div class="tab-content">
+
+          <div role="tabpanel" class="tab-pane active" id="dashboard">
+            Dashboard
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="posts">
+            Posts
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="campaigns">
+            Campaigns
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+  <!-- FOOT FOOT FOOT ----------------------------------------------------------->
+  <section class="current-track">
+    <div class="current-track__options">
+      <span class="controls">
+        <a href="#" class="control devices">
+          <i class="ion-android-sync"></i>
+        </a>
+        <a href="#" class="control devices">
+          <i class="ion-android-settings"></i>
+        </a>
+        <a href="#" class="control devices">
+          <i class="ion-ios-location-outline"></i>
+        </a>
+        <a href="#" class="control devices">
+          <i class="ion-ios-world-outline"></i>
+          <span>CityStream 2016</span>
+        </a>
+
+      </span>
+    </div>
+  </section>
+
+  </body>
+</html>
