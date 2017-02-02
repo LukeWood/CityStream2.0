@@ -65,7 +65,17 @@ for(var i  in all_tags){
   }
 }
 
+function get(req,res,next){
+  if(req.query.search == null){
+    res,send(JSON.stringify([]))
+    return;
+  }
+  res.send(JSON.stringify(_search(req.query.search)))
+  return;
+}
+
 module.exports = {
   search:_search,
-  insert:_insert
+  insert:_insert,
+  get:get
 };
