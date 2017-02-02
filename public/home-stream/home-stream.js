@@ -139,6 +139,28 @@ var mtags = new Vue({
 	}
 })
 
+
+function init(){
+	var old_tags = null;
+
+  var searcher = document.getElementById("searcher");
+  searcher.addEventListener("keydown",function(e){
+    if(searcher.value.length == 0){
+			if(old_tags != null){
+				mtags.moods = old_tags;
+				old_tags=null;
+			}
+    }
+		else{
+			if(old_tags == null){
+				old_tags = mtags.moods.slice();
+			}
+			Toast.getJSON("/search?search="+searcher.value.toLowerCase(),"mtags.moods = data.slice()");
+		}
+  });
+}
+init();
+
 function delete_from_tags(mood){
 	var index = mtags.moods.indexOf(mood);
 	if (index > -1) {
