@@ -10,6 +10,7 @@ var slideout = new Slideout({
 document.querySelector('.toggle-button').addEventListener('click', function() {
 	slideout.toggle();
 });
+var searcher = document.getElementById("searcher");
 
 Vue.component("square",{
 	props: ["event"],
@@ -116,17 +117,17 @@ Vue.component("moodtag",{
 						next_tag();
 			    }
 			}
+			searcher.value = "";
+			searcher_cb();
 			http.send(params);
 		},
 		imageExists(image_url){
 
 	    var http = new XMLHttpRequest();
-
 	    http.open('HEAD', image_url, false);
 	    http.send();
 
 	    return http.status != 404;
-
 	}
 
 	}
@@ -140,26 +141,25 @@ var mtags = new Vue({
 })
 
 
-function init(){
-	var old_tags = null;
+var old_tags = null;
 
-  var searcher = document.getElementById("searcher");
-  searcher.addEventListener("keydown",function(e){
-    if(searcher.value.length == 0){
-			if(old_tags != null){
-				mtags.moods = old_tags;
-				old_tags=null;
-			}
-    }
-		else{
-			if(old_tags == null){
-				old_tags = mtags.moods.slice();
-			}
-			Toast.getJSON("/search?search="+searcher.value.toLowerCase(),"mtags.moods = data.slice()");
+function searcher_cb(e){
+  if(searcher.value.length == 0){
+		if(old_tags != null){
+			mtags.moods = old_tags;
+			old_tags=null;
 		}
-  });
+  }
+	else{
+		if(old_tags == null){
+			old_tags = mtags.moods.slice();
+		}
+		Toast.getJSON("/search?search="+searcher.value.toLowerCase(),"mtags.moods = data.slice()");
+	}
 }
-init();
+
+searcher.addEventListener("keyup",searcher_cb);
+
 
 function delete_from_tags(mood){
 	var index = mtags.moods.indexOf(mood);
