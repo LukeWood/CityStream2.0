@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/next_xp",tag_routing.next_xp);
 app.get("/next_tag",tag_routing.next_tag);
-
+app.get("/search",require("./routes/search.js").get);
 
 app.post("/clicked",tag_routing.clicked);
 
