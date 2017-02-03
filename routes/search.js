@@ -61,7 +61,7 @@ function _search(query){
 var all_tags = require("../graph/states/tag_stack_mapping.json");
 for(var i  in all_tags){
   if(Object.prototype.hasOwnProperty.call(all_tags,i)){
-    base.insert(i);
+    base.insert(i.replace(" ","_"));
   }
 }
 
@@ -70,7 +70,7 @@ function get(req,res,next){
     res,send(JSON.stringify([]))
     return;
   }
-  res.send(JSON.stringify(_search(req.query.search)))
+  res.send(JSON.stringify(_search(req.query.search.replace(" ","_"))))
   return;
 }
 
