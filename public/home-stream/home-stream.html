@@ -1,16 +1,25 @@
 
     <nav id="menu">
       <div id="spacer"></div>
+
+
+
+
         <form id="search">
+          <div id="active_moods" style="margin-bottom:10px">
+            <transition-group name="fade" mode="out-in" tag="div">
+              <moodtag v-for="mood in moods" v-bind:key="mood" v-bind:mood="mood" class="list-item"></moodtag>
+            </transition-group>
+          </div>
         <input name="q" id="searcher" type="text" size="40" placeholder="Search for a Moodtag" />
 
 
         <div class="moodtags-container">
           <div id="moods">
+
             <transition-group name="fade" mode="out-in" tag="div">
               <moodtag v-for="mood in moods" v-bind:key="mood" v-bind:mood="mood" class="list-item"></moodtag>
             </transition-group>
-
           </div>
 
         </div>
@@ -43,7 +52,3 @@
         </transition-group>
       </div>
     </main>
-
-    <script>
-
-    </script>

@@ -97,6 +97,13 @@ Vue.component("square",{
 	`
 });
 
+var active_mtags = new Vue({
+	el:"#active_moods",
+	data:{
+		moods:[]
+	}
+});
+
 Vue.component("moodtag",{
 	props: ["mood"],
 	template:
@@ -124,10 +131,13 @@ Vue.component("moodtag",{
 			//Send the proper header information along with the request
 			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-			http.onreadystatechange = function() {//Call a function when the state changes.
+			http.onreadystatechange = function(res) {//Call a function when the state changes.
 			    if(http.readyState == 4 && http.status == 200) {
-						add_five_xps();
+						add_five_xps();;
+
 						next_tag();
+						active_mtags.moods.push(mood);
+						active_mtags.moods=active_mtags.moods.slice(-3);
 			    }
 			}
 			searcher.value = "";
@@ -155,7 +165,6 @@ var mtags = new Vue({
 
 
 var old_tags = null;
-
 function searcher_cb(e){
   if(searcher.value.length == 0){
 		if(old_tags != null){
@@ -210,7 +219,7 @@ function randomColor(){
 		return colors[colorIndex++ % colors.length];
 }
 
-for(var j = 0; j < 50; j++){
+for(var j = 0; j < 20; j++){
 	$.getJSON("/next_xp",function(event){
 		feed1.events.push({
 			outerstyle:{
@@ -268,7 +277,7 @@ function add_five_xps(){
 					tag:event.Tags,
 					description:event.Description
 				});
-				if(i == 5){
+				if(i == 25){
 					while(temp.length != 0 ){
 						feed1.events.unshift(temp.pop());
 						feed1.events.pop();
