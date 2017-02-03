@@ -136,7 +136,9 @@ Vue.component("moodtag",{
 						add_five_xps();;
 
 						next_tag();
+						if(active_mtags.moods.slice(-3).indexOf(mood) != -1){
 						active_mtags.moods.push(mood);
+						}
 						active_mtags.moods=active_mtags.moods.slice(-3);
 			    }
 			}
