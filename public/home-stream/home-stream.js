@@ -272,7 +272,7 @@ function add_five_xps(){
 					},
 					image:event.Image,
 					title:event.Title,
-					id:j,
+					id:i,
 					venue:event.Venue,
 					tag:event.Tags,
 					description:event.Description
