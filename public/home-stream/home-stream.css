@@ -1,9 +1,12 @@
 /** General **/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 
 body {
   width: 100%;
   height: 100%;
   background-color: #34363f;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 h2{
