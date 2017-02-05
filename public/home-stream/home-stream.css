@@ -28,6 +28,7 @@ h2{
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
+
 }
 .slideout-panel {
   position: relative;
@@ -238,4 +239,8 @@ input#toggle:checked + label:after {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
+}
+
+.page{
+  overflow: hidden; 
 }
