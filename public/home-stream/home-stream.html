@@ -1,8 +1,7 @@
 <div class="page">
+
     <nav id="menu">
       <div id="spacer"></div>
-
-
 
         <form id="search">
           <div id="active_moods" style="margin-bottom:10px">
@@ -35,14 +34,12 @@
     </nav>
 
     <main id="panel">
-    <div class="smooth-scroll">
+
       <header>
         <button class="toggle-button"> <i class="ion-gear-a"></i> </button>
         <h2>Home Stream</h2>
       </header>
-
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
-
       <div id="grid-container">
         <button v-on:click="shuffle">Shuffle</button>
         <transition-group name="fade" tag="div">
@@ -51,6 +48,6 @@
           </square>
         </transition-group>
       </div>
-    </div>
+
     </main>
 </div>

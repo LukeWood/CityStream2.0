@@ -21,7 +21,11 @@ h2{
   background-color: #dddddd;
 }
 
-/** slideout **/
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .slideout-menu {
   position: fixed;
   top: 0;
@@ -32,16 +36,7 @@ h2{
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
-
 }
-.slideout-panel {
-  position: relative;
-  z-index: 1;
-  will-change: transform;
-  background-color: #f8f8f8; /* A background-color is required */
-  min-height: 100vh;
-}
-
 
 .slideout-menu-left {
   left: 0;
@@ -49,6 +44,14 @@ h2{
 
 .slideout-menu-right {
   right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
 }
 
 .slideout-open,
