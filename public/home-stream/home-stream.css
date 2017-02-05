@@ -234,6 +234,6 @@ input#toggle:checked + label:after {
 }
 
 .smooth-scroll {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; 
+
+  -webkit-overflow-scrolling: touch;
 }
