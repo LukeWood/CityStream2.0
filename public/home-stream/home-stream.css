@@ -234,6 +234,7 @@ input#toggle:checked + label:after {
 }
 
 .smooth-scroll {
+  /** overflow-y: scroll;    This messed up the scroll**/
 
   -webkit-overflow-scrolling: touch;
 }
