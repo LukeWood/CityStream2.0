@@ -237,7 +237,5 @@ input#toggle:checked + label:after {
 
 .page {
   /** overflow-y: scroll;    This messed up the scroll**/
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
 }

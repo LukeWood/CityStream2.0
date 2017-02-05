@@ -90,6 +90,9 @@ button {
   -webkit-overflow-scrolling: touch;
 }
 
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
 
 ::-webkit-scrollbar {
   width: 8px; }
