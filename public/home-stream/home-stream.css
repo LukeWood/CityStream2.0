@@ -242,5 +242,5 @@ input#toggle:checked + label:after {
 }
 
 .page{
-  overflow: hidden; 
+  overflow: hidden;
 }
