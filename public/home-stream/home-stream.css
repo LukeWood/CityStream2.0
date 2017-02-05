@@ -37,6 +37,8 @@ h2{
 .slideout-panel {
   position: relative;
   z-index: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   will-change: transform;
   background-color: #f8f8f8; /* A background-color is required */
   min-height: 100vh;
