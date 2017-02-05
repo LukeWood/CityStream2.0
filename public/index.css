@@ -85,6 +85,11 @@ button {
   margin-bottom: 10px;
   margin-top:0px;
 }
+.module{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 ::-webkit-scrollbar {
   width: 8px; }
