@@ -133,9 +133,9 @@ Vue.component("moodtag",{
 
 			http.onreadystatechange = function(res) {//Call a function when the state changes.
 			    if(http.readyState == 4 && http.status == 200) {
-						add_five_xps();;
+						get_xps();;
 
-						next_tag();
+						refresh_tags();
 						if(active_mtags.moods.slice(-3).indexOf(mood) == -1)
 							active_mtags.moods.push(mood);
 						active_mtags.moods=active_mtags.moods.slice(-3);
@@ -193,11 +193,9 @@ function delete_from_tags(mood){
 	}
 }
 
-for(var i = 0; i < 15; i++){
-	$.getJSON("/next_tag",function(tag){
-		mtags.moods.push(tag.tagname);
-	});
-}
+Toast.getJSON("/next_tag",function(tags){
+	mtags.moods = tags.reverse();
+});
 
 var timestamp = 0;
 var feed1 = new Vue({
@@ -220,73 +218,63 @@ function randomColor(){
 		return colors[colorIndex++ % colors.length];
 }
 
-for(var j = 0; j < 20; j++){
-	$.getJSON("/next_xp",function(event){
-		feed1.events.push({
-			outerstyle:{
-				display:"inline-block",
-				margin:"10px"
-			},
-			styleObject:{
-				width:"350px",
-				height:"360px",
-				backgroundColor:randomColor(),
-				display:"inline-block",
-				overflow:"hidden"
-			},
-			image:event.Image,
-			title:event.Title,
-			id:j,
-			venue:event.Venue,
-			tag:event.Tags,
-			description:event.Description
-		});
-});
+Toast.getJSON("/next_xp",function(events){
+		for(var j = 0; j < events.length; j++){
+			var event = events[j];
+			feed1.events.push({
+									outerstyle:{
+										display:"inline-block",
+										margin:"10px"
+									},
+									styleObject:{
+										width:"350px",
+										height:"360px",
+										backgroundColor:randomColor(),
+										display:"inline-block",
+										overflow:"hidden"
+									},
+									image:event.Image,
+									title:event.Title,
+									id:j,
+									venue:event.Venue,
+									tag:event.Tags,
+									description:event.Description
+			});
+		}
+	});
+
+
+function refresh_tags(){
+	Toast.getJSON("/next_tag",function(tags){
+		mtags.moods = tags;
+	});
 }
 
-function next_tag(){
-	mtags.moods = [];
 
-	for(var i = 0; i < 15; i++){
-		$.getJSON("/next_tag",function(tag){
-			mtags.moods.push(tag.tagname);
-		});
-	}
-}
-
-
-function add_five_xps(){
-	var temp = [];
-	(function cb(i){
-			$.getJSON("/next_xp",function(event){
-				temp.push({
-					outerstyle:{
-						display:"inline-block",
-						margin:"10px"
-					},
-					styleObject:{
-						width:"350px",
-						height:"360px",
-						backgroundColor:randomColor(),
-						display:"inline-block",
-						overflow:"hidden"
-					},
-					image:event.Image,
-					title:event.Title,
-					id:i,
-					venue:event.Venue,
-					tag:event.Tags,
-					description:event.Description
-				});
-				if(i == 25){
-					while(temp.length != 0 ){
-						feed1.events.unshift(temp.pop());
-						feed1.events.pop();
-					}
-				}
-				else{
-					cb(i+1);
+function get_xps(){
+			$.getJSON("/next_xp",function(events){
+				for(var j = events.length-1; j >=0; j--){
+					var event = events[j];
+					feed1.events.unshift({
+											outerstyle:{
+												display:"inline-block",
+												margin:"10px"
+											},
+											styleObject:{
+												width:"350px",
+												height:"360px",
+												backgroundColor:randomColor(),
+												display:"inline-block",
+												overflow:"hidden"
+											},
+											image:event.Image,
+											title:event.Title,
+											id:j,
+											venue:event.Venue,
+											tag:event.Tags,
+											description:event.Description
+					});
+					feed1.events.pop();
 				}
 			});
-	})(0);
 }
