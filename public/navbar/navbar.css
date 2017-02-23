@@ -38,10 +38,3 @@
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
   }
-
-  #cf2 img.transparent {
-  opacity:0;
-  }
-  #cf_onclick {
-  cursor:pointer;
-  }

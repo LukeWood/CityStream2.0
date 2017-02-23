@@ -1,3 +1,16 @@
+//forcing
+var slideout = new Slideout({
+	'panel': document.getElementById('panel'),
+	'menu': document.getElementById('menu'),
+	'padding': 256,
+	'tolerance': 70
+});
+
+// Toggle button
+document.querySelector('.toggle-button').addEventListener('click', function() {
+	slideout.toggle();
+});
+var searcher = document.getElementById("searcher");
 
 
 // Toggle button
@@ -27,6 +40,7 @@ Vue.component("square",{
 
 				<center style=' color: #fff; bottom:1%; width:90%; margin-left:10px;font-size:14px; font-family:Raleway'>
 						<div style='font-size: 15px; font-family:Raleway-Bold '> {{event.title}} </div>
+
 						<a style='font-size: 12px; color: #fff; ' href='/business-profile/'> {{event.venue}}		</a>
 						<div style=' font-size: 10px; font-size: 10px; max-height: 30px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;'>   {{event.description}}		</div>
 			 </center>

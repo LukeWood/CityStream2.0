@@ -1,6 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
 body {
   background: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 body a {
@@ -84,6 +87,14 @@ button {
   font-size: 14px;
   margin-bottom: 10px;
   margin-top:0px;
+}
+.module{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 ::-webkit-scrollbar {
